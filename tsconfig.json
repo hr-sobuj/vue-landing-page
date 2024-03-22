@@ -4,6 +4,7 @@
     "useDefineForClassFields": true,
     "module": "ESNext",
     "lib": [
+      "ES2016",
       "ES2020",
       "DOM",
       "DOM.Iterable"
@@ -25,12 +26,11 @@
     "paths": {
       "@/*": [
         "./*"
+      ],
+      "./*": [
+        "./node_modules/*"
       ]
     },
-    // others
-    "moduleResolution": "node",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true
   },
   "include": [
     "src/**/*.ts",
