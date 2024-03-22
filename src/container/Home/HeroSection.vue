@@ -7,10 +7,12 @@ import heroImg3 from "./../../assets/images/home/hero/hero-img-3.png";
 
 <template>
   <section id="hero">
-    <div class="container flex justify-center items-center min-h-[400px]">
-      <div class="basis-1/2 relative">
+    <div
+      class="container flex flex-col md:flex-row justify-center items-center min-h-[300px]"
+    >
+      <div class="basis-full md:basis-1/2 order-1 static md:relative">
         <div
-          class="flex flex-col justify-center space-y-10 absolute inset-y-auto"
+          class="flex flex-col justify-center space-y-10 md:absolute md:inset-y-auto"
         >
           <div class="inline-flex flex-col space-y-5">
             <h3 class="text-5xl font-bold">
@@ -49,7 +51,7 @@ import heroImg3 from "./../../assets/images/home/hero/hero-img-3.png";
           </div>
         </div>
       </div>
-      <div class="basis-1/2">
+      <div class="basis-full md:basis-1/2 w-full order-2">
         <div class="group">
           <div class="relative group">
             <div class="inline-flex justify-start items-start z-[200]">
@@ -61,9 +63,7 @@ import heroImg3 from "./../../assets/images/home/hero/hero-img-3.png";
               />
             </div>
 
-            <div
-              class="absolute inset-x-[30%] inset-y-[30%] w-full h-full rounded-full z-[-200]"
-            >
+            <div class="absolute left-[30%] top-[45%] rounded-full z-[-200]">
               <div class="bg-[#15BEE3] p-28 opacity-[0.07] blur-md"></div>
             </div>
             <img
