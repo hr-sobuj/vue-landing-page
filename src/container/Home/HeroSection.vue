@@ -18,7 +18,7 @@ import heroImg3 from "./../../assets/images/home/hero/hero-img-3.png";
             <h3 class="text-5xl font-bold">
               {{ heroSection.title }}
             </h3>
-            <p class="text-[#4F4F4F]">
+            <p class="text-textGray">
               {{ heroSection.description }}
             </p>
           </div>

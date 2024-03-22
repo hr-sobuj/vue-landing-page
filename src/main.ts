@@ -4,6 +4,7 @@ import NavBar from './components/navbar/NavBar.vue';
 import HeroSection from './container/Home/HeroSection.vue';
 import Home from './pages/Home.vue';
 
+import 'swiper/css';
 import './style.css';
 
 const app = createApp(App);

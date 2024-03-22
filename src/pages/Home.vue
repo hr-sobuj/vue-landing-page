@@ -1,6 +1,7 @@
 <script setup name="Home">
 import NavBar from "../components/navbar/NavBar.vue";
 import Brands from "../container/Home/Brands.vue";
+import Grow from "../container/Home/Grow.vue";
 import HeroSection from "../container/Home/HeroSection.vue";
 </script>
 
@@ -9,5 +10,6 @@ import HeroSection from "../container/Home/HeroSection.vue";
   <main>
     <hero-section />
     <brands />
+    <grow />
   </main>
 </template>

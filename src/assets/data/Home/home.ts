@@ -1,3 +1,7 @@
+import growIcon1 from './../../images/home/grow/icon1.svg';
+import growIcon2 from './../../images/home/grow/icon2.svg';
+import growIcon3 from './../../images/home/grow/icon3.svg';
+
 export const navContent = {
     "links": [
         {
@@ -39,3 +43,26 @@ export const heroSection = {
         "Cancel anytime"
     ]
 };
+
+export const growContent = {
+    'title': 'How To Grow Your Business',
+    'description': 'Class aptent taciti sociosqu ad litora torquen conubia nostramase inceptos himenaeo. Phasellus metus nisl euismod eget lorem.',
+    'card': [
+        {
+            'icon': growIcon1,
+            'title': 'Active User Analytics',
+            'description': 'Class aptent taciti sociosqu litora torquen conubia nostram.'
+        },
+        {
+            'icon': growIcon2,
+            'title': 'Smart Coding Development',
+            'description': 'Morbi eget aliquet finibus, best condimentum aliquet quam.'
+        }
+        ,
+        {
+            'icon': growIcon3,
+            'title': 'User Friendly Interface',
+            'description': 'Quisque magna, sollicitudin vitae, lobortis feugiat arcu.'
+        }
+    ]
+}
