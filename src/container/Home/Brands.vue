@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import brandImg1 from "./../../assets/images/home/brands/img-1.png";
 import brandImg2 from "./../../assets/images/home/brands/img-2.png";
 import brandImg3 from "./../../assets/images/home/brands/img-3.png";

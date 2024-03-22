@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup name="NavBar">
 import { navContent } from "./../../assets/data/Home/home";
 import Logo from "./../../assets/images/logo.png";
 </script>

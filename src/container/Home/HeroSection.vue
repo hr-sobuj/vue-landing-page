@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import { heroSection } from "./../../assets/data/Home/home";
 import heroImg1 from "./../../assets/images/home/hero/hero-img-1.png";
 import heroImg2 from "./../../assets/images/home/hero/hero-img-2.png";

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup name="Home">
 import NavBar from "../components/navbar/NavBar.vue";
 import Brands from "../container/Home/Brands.vue";
 import HeroSection from "../container/Home/HeroSection.vue";
