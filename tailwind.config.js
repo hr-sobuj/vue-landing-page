@@ -11,7 +11,7 @@ export default {
         primary: '#3921F5',
         secondary: '#1E0FC2',
         textGray: '#4F4F4F',
-        darkFooter: '#141F39',
+        secondary2: '#141F39',
         grayIcon: '#B4B6C4'
       }
     },

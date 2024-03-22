@@ -5,23 +5,43 @@ import { growContent } from "./../../assets/data/Home/home";
 <template>
   <section id="grow">
     <div class="container">
-      <div class="flex flex-col justify-center items-center">
-        <div class="text-center">
-          <h3 class="text-4xl">
+      <div class="flex flex-col justify-center items-center space-y-12">
+        <div class="text-center inline-flex space-y-4 flex-col">
+          <h3 class="text-4xl text-secondary2 font-semibold">
             {{ growContent.title }}
           </h3>
-          <p class="text-textGray">
-            {{ growContent.description }}
-          </p>
-        </div>
-        <div>
-          <div v-for="card of growContent.card" :key="card.title">
-            <span>{{ card.icon }}</span>
-            <span>{{ card.title }}</span>
-            <span>{{ card.description }}</span>
+          <div class="inline-flex justify-center items-center">
+            <p class="text-textGray text-base">
+              {{ growContent.description }}
+            </p>
           </div>
         </div>
+        <div class="flex space-x-6">
+          <div
+            v-for="card of growContent.card"
+            :key="card.title"
+            class="flex flex-col justify-center items-center text-center bg-white py-14 px-7 space-y-4 custom-shadow"
+          >
+            <img :src="card.icon" :alt="card.title" class="w-[70px] h-[70px]" />
+            <h5 class="text-secondary2 text-xl font-semibold">
+              {{ card.title }}
+            </h5>
+            <p class="text-textGray text-lg">{{ card.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-20 text-xl">
+        <span class="text-secondary2">
+          Approx <span class="text-primary"> 875+ </span> team members ready to
+          online support for you
+        </span>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.custom-shadow {
+  box-shadow: 0 0px 36px rgba(0, 0, 0, -0.2), 0 0px 36px rgba(0, 0, 0, 0.12);
+}
+</style>
