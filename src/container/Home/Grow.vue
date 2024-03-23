@@ -1,5 +1,20 @@
-<!-- <script setup lang="ts">
-import { growContent } from "../../assets/data/Home/home";
+<script setup lang="ts">
+interface Card {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+interface GrowContents {
+  title: string;
+  description: string;
+  card: Card[];
+}
+
+const props = defineProps<{
+  growContents: GrowContents;
+}>();
+const { growContents } = props;
 </script>
 
 <template name="Grow">
@@ -8,17 +23,17 @@ import { growContent } from "../../assets/data/Home/home";
       <div class="flex flex-col justify-center items-center space-y-12">
         <div class="text-center inline-flex space-y-4 flex-col">
           <h3 class="text-4xl text-secondary2 font-semibold">
-            {{ growContent.title }}
+            {{ growContents.title }}
           </h3>
           <div class="inline-flex justify-center items-center">
             <p class="text-textGray text-base">
-              {{ growContent.description }}
+              {{ growContents.description }}
             </p>
           </div>
         </div>
         <div class="flex space-x-6">
           <div
-            v-for="card of growContent.card"
+            v-for="card of growContents.card"
             :key="card.title"
             class="flex flex-col justify-center items-center text-center bg-white py-14 px-7 space-y-4 custom-shadow"
           >
@@ -44,4 +59,4 @@ import { growContent } from "../../assets/data/Home/home";
 .custom-shadow {
   box-shadow: 0 0px 36px rgba(0, 0, 0, -0.2), 0 0px 36px rgba(0, 0, 0, 0.12);
 }
-</style> -->
+</style>

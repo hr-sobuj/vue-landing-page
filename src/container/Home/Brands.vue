@@ -1,20 +1,23 @@
-<!-- <script setup lang="ts">
-import brandImg1 from "./../../assets/images/home/brands/img-1.png";
-import brandImg2 from "./../../assets/images/home/brands/img-2.png";
-import brandImg3 from "./../../assets/images/home/brands/img-3.png";
-import brandImg4 from "./../../assets/images/home/brands/img-4.png";
-
+<script setup lang="ts">
 import { Navigation, Autoplay } from "swiper/modules";
+// @ts-ignore
 import { Swiper, SwiperSlide } from "swiper/vue";
-
 const modules = [Navigation, Autoplay];
-const sliderItems = [
-  { src: brandImg1, alt: "Brand Image 1" },
-  { src: brandImg2, alt: "Brand Image 2" },
-  { src: brandImg3, alt: "Brand Image 3" },
-  { src: brandImg4, alt: "Brand Image 4" },
-  { src: brandImg3, alt: "Brand Image 3" },
-];
+
+interface SliderItems {
+  src: string;
+  alt: string;
+}
+
+interface BrandContents {
+  sliderItems: SliderItems[];
+}
+const props = defineProps<{
+  brandContents: BrandContents;
+}>();
+const {
+  brandContents: { sliderItems },
+} = props;
 </script>
 
 <template name="Brands">
@@ -34,4 +37,4 @@ const sliderItems = [
       </swiper>
     </div>
   </section>
-</template> -->
+</template>

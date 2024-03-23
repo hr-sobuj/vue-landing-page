@@ -3,7 +3,7 @@ import heroImg1 from "@/assets/images/home/hero/hero-img-1.png";
 import heroImg2 from "@/assets/images/home/hero/hero-img-2.png";
 import heroImg3 from "@/assets/images/home/hero/hero-img-3.png";
 
-interface HeroContent {
+interface HeroContents {
   title: string;
   description: string;
   btn1: string;
@@ -12,17 +12,17 @@ interface HeroContent {
 }
 
 // const props = defineProps({
-//   heroContent: {
-//     type: Object as () => HeroContent,
+//   HeroContents: {
+//     type: Object as () => HeroContents,
 //     required: true,
 //   },
 // });
 
 const props = defineProps<{
-  heroContent: HeroContent;
+  heroContents: HeroContents;
 }>();
 
-const { heroContent } = props;
+const { heroContents } = props;
 </script>
 
 <template>
@@ -36,17 +36,17 @@ const { heroContent } = props;
         >
           <div class="inline-flex flex-col space-y-5">
             <h3 class="text-5xl font-bold">
-              {{ heroContent.title }}
+              {{ heroContents.title }}
             </h3>
             <p class="text-textGray">
-              {{ heroContent.description }}
+              {{ heroContents.description }}
             </p>
           </div>
           <div class="flex justify-start items-center space-x-6">
-            <button class="btn-primary px-10">{{ heroContent.btn1 }}</button>
+            <button class="btn-primary px-10">{{ heroContents.btn1 }}</button>
             <button class="inline-flex space-x-1 font-semibold group">
               <span>
-                {{ heroContent.btn2 }}
+                {{ heroContents.btn2 }}
               </span>
               <span class="group-hover:translate-x-1 transition-transform">
                 <svg

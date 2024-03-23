@@ -1,11 +1,19 @@
-import growIcon1 from './../../images/home/grow/icon1.svg';
-import growIcon2 from './../../images/home/grow/icon2.svg';
-import growIcon3 from './../../images/home/grow/icon3.svg';
-
+import brandImg1 from "@/assets/images/home/brands/img-1.png";
+import brandImg2 from "@/assets/images/home/brands/img-2.png";
+import brandImg3 from "@/assets/images/home/brands/img-3.png";
+import brandImg4 from "@/assets/images/home/brands/img-4.png";
+import growIcon1 from '@/assets/images/home/grow/icon1.svg';
+import growIcon2 from '@/assets/images/home/grow/icon2.svg';
+import growIcon3 from '@/assets/images/home/grow/icon3.svg';
+import Logo from "@/assets/images/logo.png";
 
 const home = {};
 
-home.navContent = {
+home.navContents = {
+    "logo": {
+        src: Logo,
+        alt: "Logo",
+    },
     "links": [
         {
             "url": "/",
@@ -35,7 +43,7 @@ home.navContent = {
     "btnTxt": "Get Started Free"
 };
 
-home.heroContent = {
+home.heroContents = {
     "title": "Smart-Thinking & Innovative Solution.",
     "description": "Class aptent taciti sociosqu ad litora torquent conubia nostrama inceptos himenaeos. Donec tristique nibh ipsum dignissim.",
     "btn1": "Discover More",
@@ -47,7 +55,17 @@ home.heroContent = {
     ]
 };
 
-home.growContent = {
+home.brandContents = {
+    sliderItems: [
+        { src: brandImg1, alt: "Brand Image 1" },
+        { src: brandImg2, alt: "Brand Image 2" },
+        { src: brandImg3, alt: "Brand Image 3" },
+        { src: brandImg4, alt: "Brand Image 4" },
+        { src: brandImg3, alt: "Brand Image 3" },
+    ]
+}
+
+home.growContents = {
     'title': 'How To Grow Your Business',
     'description': 'Class aptent taciti sociosqu ad litora torquen conubia nostramase inceptos himenaeo. Phasellus metus nisl euismod eget lorem.',
     'card': [
@@ -71,7 +89,7 @@ home.growContent = {
 }
 
 
-home.securityContent = {
+home.securityContents = {
     title: 'Better Security To Better Protection An Experience Of Strength.',
     description: 'Class aptent taciti sociosqu ad litora torquent conubia nostrama inceptos himenaeos. Donec tristique nibh ipsum dignissim.',
     extra: [
