@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import securityImg from "@/assets/images/home/security/security-img.png";
+import { ImgType } from "../../interfaces/homeInterface";
+
 interface ExtraContent {
   title: string;
   description: string;
@@ -9,11 +10,15 @@ interface SecurityContents {
   title: string;
   description: string;
   extra: ExtraContent[];
+  securityImg: ImgType;
 }
 const props = defineProps<{
   securityContents: SecurityContents;
 }>();
-const { securityContents } = props;
+const {
+  // @ts-ignore
+  securityContents: { title, description, securityImg },
+} = props;
 </script>
 
 <template name="Security">
@@ -22,11 +27,11 @@ const { securityContents } = props;
       <div class="flex justify-center items-center">
         <div>
           <div>
-            <h3>{{ securityContents.title }}</h3>
+            <h3>{{ title }}</h3>
           </div>
         </div>
         <div>
-          <img :src="securityImg" alt="Security Image" />
+          <img :src="securityImg.src" :alt="securityImg.alt" />
         </div>
       </div>
     </div>

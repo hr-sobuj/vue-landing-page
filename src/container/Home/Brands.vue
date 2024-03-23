@@ -2,15 +2,11 @@
 import { Navigation, Autoplay } from "swiper/modules";
 // @ts-ignore
 import { Swiper, SwiperSlide } from "swiper/vue";
+import { ImgType } from "../../interfaces/homeInterface";
 const modules = [Navigation, Autoplay];
 
-interface SliderItems {
-  src: string;
-  alt: string;
-}
-
 interface BrandContents {
-  sliderItems: SliderItems[];
+  sliderItems: ImgType[];
 }
 const props = defineProps<{
   brandContents: BrandContents;
