@@ -12,9 +12,11 @@ interface SecurityContents {
   extras: ExtraContent[];
   securityImg: ImgType;
 }
+
 const props = defineProps<{
   securityContents: SecurityContents;
 }>();
+
 const {
   // @ts-ignore
   securityContents: { title, description, securityImg, extras },

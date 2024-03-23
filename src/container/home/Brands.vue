@@ -8,9 +8,11 @@ const modules = [Navigation, Autoplay];
 interface BrandContents {
   sliderItems: ImgType[];
 }
+
 const props = defineProps<{
   brandContents: BrandContents;
 }>();
+
 const {
   brandContents: { sliderItems },
 } = props;

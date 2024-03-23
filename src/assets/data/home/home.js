@@ -100,33 +100,31 @@ home.securityContents = {
     }
 }
 
-home.performanceContent = {
+home.performanceContents = {
     title: 'Performance Is The Key To Most People Achieving A Better Future',
     description: 'Etiam euismod odio euismod lacus fringilla hendrer.',
-    accordion: {
-        items: [
-            {
-                title: 'Custom Edit Tool Application',
-                description: 'Cupidatat laboris non duis non et deserunt in nisi do consequat excepteur.'
-            },
-            {
-                title: 'Built In Safty Chat Mode Enabled',
-                description: 'Fugiat culpa nulla eu cupidatat occaecat nisi.'
-            },
-            {
-                title: 'Foster Trust Builds System Always Open',
-                description: 'Do ut fugiat pariatur pariatur ipsum fugiat occaecat tempor voluptate nostrud excepteur sint.'
-            },
-            {
-                title: 'Foster Trust Builds System Always Open',
-                description: 'Do ut fugiat pariatur pariatur ipsum fugiat occaecat tempor voluptate nostrud excepteur sint.'
-            },
-            {
-                title: 'Create Auto Layouts In App Interface',
-                description: 'Amet minim elit nulla exercitation in aute adipisicing aliquip do consequat reprehenderit.'
-            }
-        ],
-    },
+    accordion: [
+        {
+            title: 'Custom Edit Tool Application',
+            description: 'Cupidatat laboris non duis non et deserunt in nisi do consequat excepteur.'
+        },
+        {
+            title: 'Built In Safty Chat Mode Enabled',
+            description: 'Fugiat culpa nulla eu cupidatat occaecat nisi.'
+        },
+        {
+            title: 'Foster Trust Builds System Always Open',
+            description: 'Do ut fugiat pariatur pariatur ipsum fugiat occaecat tempor voluptate nostrud excepteur sint.'
+        },
+        {
+            title: 'Foster Trust Builds System Always Open',
+            description: 'Do ut fugiat pariatur pariatur ipsum fugiat occaecat tempor voluptate nostrud excepteur sint.'
+        },
+        {
+            title: 'Create Auto Layouts In App Interface',
+            description: 'Amet minim elit nulla exercitation in aute adipisicing aliquip do consequat reprehenderit.'
+        }
+    ],
     performanceImg: {
         src: performanceImg,
         alt: 'Performance Image'
@@ -137,7 +135,7 @@ home.performanceContent = {
     }
 }
 
-home.choose = {
+home.chooseContents = {
     title: 'Why Will You Choose Our Application',
     description: 'Class aptent taciti sociosqu ad litora torquen conubia nostramase inceptos himenaeo. Phasellus metus nisl euismod eget lorem.',
     chooseImg: {
@@ -168,7 +166,7 @@ home.choose = {
     ]
 }
 
-home.app = {
+home.appContents = {
     title: 'Ready To Use Our App With No Hidden Malware',
     description: 'Etiam euismod volutpat lacus fringilla henr. Mauris lobortis purus velit quis. Nunc mollis venenatis metus nec aliquet.',
     appImg: {
@@ -178,7 +176,7 @@ home.app = {
 }
 
 
-home.help = {
+home.helpContents = {
     title: 'We Help To GrowYour Business',
     description: 'Quisque fermentum porta tincidunt. Interdum semper. Pellentesque facilisis augue dolor mollis suscipit erat libero fermentum.',
     items: [
@@ -202,7 +200,7 @@ home.help = {
 }
 
 
-home.say = {
+home.sayContents = {
     title: 'What People Say',
     description: 'Quisque fermentum porta tincidunt. Interdum semper. Pellentesque facilisis augue mollis suscipit.',
     cards: [

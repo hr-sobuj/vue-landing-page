@@ -1,27 +1,30 @@
 <script setup lang="ts">
+import { ImgType } from "../../interfaces/homeInterface";
+
 interface Card {
   icon: string;
   title: string;
   description: string;
 }
 
-interface GrowContents {
+interface ChooseContents {
   title: string;
   description: string;
+  chooseImg: ImgType;
   cards: Card[];
 }
 
 const props = defineProps<{
-  growContents: GrowContents;
+  chooseContents: ChooseContents;
 }>();
 const {
   // @ts-ignore
-  growContents: { title, description, cards },
+  chooseContents: { title, description, chooseImg, cards },
 } = props;
 </script>
 
-<template name="Grow">
-  <section id="grow">
+<template name="Choose">
+  <section id="choose">
     <div class="container">
       <div class="flex flex-col justify-center items-center space-y-12">
         <div class="text-center inline-flex space-y-4 flex-col">
@@ -33,6 +36,9 @@ const {
               {{ description }}
             </p>
           </div>
+        </div>
+        <div>
+          <img :src="chooseImg.src" :alt="chooseImg.alt" />
         </div>
         <div class="flex space-x-6">
           <div
