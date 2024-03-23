@@ -2,7 +2,10 @@ import growIcon1 from './../../images/home/grow/icon1.svg';
 import growIcon2 from './../../images/home/grow/icon2.svg';
 import growIcon3 from './../../images/home/grow/icon3.svg';
 
-export const navContent = {
+
+const home = {};
+
+home.navContent = {
     "links": [
         {
             "url": "/",
@@ -32,7 +35,7 @@ export const navContent = {
     "btnTxt": "Get Started Free"
 };
 
-export const heroSection = {
+home.heroContent = {
     "title": "Smart-Thinking & Innovative Solution.",
     "description": "Class aptent taciti sociosqu ad litora torquent conubia nostrama inceptos himenaeos. Donec tristique nibh ipsum dignissim.",
     "btn1": "Discover More",
@@ -44,7 +47,7 @@ export const heroSection = {
     ]
 };
 
-export const growContent = {
+home.growContent = {
     'title': 'How To Grow Your Business',
     'description': 'Class aptent taciti sociosqu ad litora torquen conubia nostramase inceptos himenaeo. Phasellus metus nisl euismod eget lorem.',
     'card': [
@@ -66,3 +69,22 @@ export const growContent = {
         }
     ]
 }
+
+
+home.securityContent = {
+    title: 'Better Security To Better Protection An Experience Of Strength.',
+    description: 'Class aptent taciti sociosqu ad litora torquent conubia nostrama inceptos himenaeos. Donec tristique nibh ipsum dignissim.',
+    extra: [
+        {
+            title: 'Well Organised User Interface',
+            description: 'Etiam id euismod odio. Ut euismod sem a lacus fringilla.',
+        },
+        {
+            title: 'Completely Bug Free',
+            description: 'Cras eleifend leo ac varius tristique suspendisse.',
+        }
+    ]
+}
+
+
+export default home;

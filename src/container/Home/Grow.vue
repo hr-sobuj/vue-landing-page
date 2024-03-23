@@ -1,8 +1,8 @@
-<script setup>
-import { growContent } from "./../../assets/data/Home/home";
+<script setup lang="ts">
+import { growContent } from "../../assets/data/Home/home";
 </script>
 
-<template>
+<template name="Grow">
   <section id="grow">
     <div class="container">
       <div class="flex flex-col justify-center items-center space-y-12">
@@ -32,8 +32,8 @@ import { growContent } from "./../../assets/data/Home/home";
       </div>
       <div class="text-center mt-20 text-xl">
         <span class="text-secondary2">
-          Approx <span class="text-primary"> 875+ </span> team members ready to
-          online support for you
+          Approx <span class="text-primary font-bold"> 875+ </span> team members
+          ready to online support for you
         </span>
       </div>
     </div>

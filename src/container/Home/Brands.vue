@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import brandImg1 from "./../../assets/images/home/brands/img-1.png";
 import brandImg2 from "./../../assets/images/home/brands/img-2.png";
 import brandImg3 from "./../../assets/images/home/brands/img-3.png";
@@ -17,7 +17,7 @@ const sliderItems = [
 ];
 </script>
 
-<template>
+<template name="Brands">
   <section id="brands" class="clear-both mt-[300px]">
     <div class="container">
       <swiper
