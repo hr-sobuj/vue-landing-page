@@ -1,16 +1,13 @@
 <script setup lang="ts">
+import { ImgType } from "../../interfaces/homeInterface";
+
 interface NavLink {
   url: string;
   name: string;
 }
 
-interface LogoType {
-  src: string;
-  alt: string;
-}
-
 interface NavContents {
-  logo: LogoType;
+  logo: ImgType;
   links: NavLink[];
   btnTxt: string;
 }
@@ -69,3 +66,4 @@ const {
     </nav>
   </header>
 </template>
+../../interfaces/homeInterface

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ImgType } from "../../interfaces/homeInterface";
+import { ImgType } from "@/types/homeTypes.ts";
 
 interface HeroContents {
   heroImg1: ImgType;
@@ -11,7 +11,12 @@ interface HeroContents {
   btn2: string;
   points: string[];
 }
-
+// const props = defineProps({
+//   HeroContents: {
+//     type: Object as () => HeroContents,
+//     required: true,
+//   },
+// });
 const props = defineProps<{
   heroContents: HeroContents;
 }>();
@@ -77,10 +82,10 @@ const {
         <div class="group">
           <div class="relative group">
             <div class="inline-flex justify-start items-start z-[200]">
-              <img :src="heroImg1.src" :alt="heroImg1.alt" class="relative" />
+              <img :src="heroImg1" alt="Hero Image 1" class="relative" />
               <img
-                :src="heroImg2.src"
-                :alt="heroImg2.alt"
+                :src="heroImg2"
+                alt="Hero Image 2"
                 class="absolute left-[265px] top-[44px]"
               />
             </div>
@@ -88,8 +93,8 @@ const {
               <div class="bg-[#15BEE3] p-28 opacity-[0.07] blur-md"></div>
             </div>
             <img
-              :src="heroImg3.src"
-              :alt="heroImg3.alt"
+              :src="heroImg3"
+              alt="Hero Image 3"
               class="absolute bottom-[-330px] right-[42px] z-[-10]"
             />
           </div>
@@ -98,4 +103,3 @@ const {
     </div>
   </section>
 </template>
-../../interfaces/homeInterface
