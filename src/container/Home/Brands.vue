@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import brandImg1 from "./../../assets/images/home/brands/img-1.png";
 import brandImg2 from "./../../assets/images/home/brands/img-2.png";
 import brandImg3 from "./../../assets/images/home/brands/img-3.png";
@@ -34,4 +34,4 @@ const sliderItems = [
       </swiper>
     </div>
   </section>
-</template>
+</template> -->

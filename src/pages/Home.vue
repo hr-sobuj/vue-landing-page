@@ -6,7 +6,7 @@
 import homeData from "@/assets/data/Home/home";
 import HeroSection from "@/container/Home/HeroSection.vue";
 
-const { heroContent, securityContent } = homeData;
+const { heroContent } = homeData;
 </script>
 
 <template name="Home">

@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import securityImg from "./../../assets/images/home/security/security-img.png";
 </script>
 
@@ -17,4 +17,4 @@ import securityImg from "./../../assets/images/home/security/security-img.png";
       </div>
     </div>
   </section>
-</template>
+</template> -->

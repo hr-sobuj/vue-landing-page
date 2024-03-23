@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import { growContent } from "../../assets/data/Home/home";
 </script>
 
@@ -44,4 +44,4 @@ import { growContent } from "../../assets/data/Home/home";
 .custom-shadow {
   box-shadow: 0 0px 36px rgba(0, 0, 0, -0.2), 0 0px 36px rgba(0, 0, 0, 0.12);
 }
-</style>
+</style> -->
