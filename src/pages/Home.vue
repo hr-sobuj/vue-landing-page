@@ -3,8 +3,8 @@
 // import Brands from "../container/Home/Brands.vue";
 // import Grow from "../container/Home/Grow.vue";
 // import Security from "../container/Home/Security.vue";
-import homeData from "../assets/data/Home/home";
-import HeroSection from "../container/Home/HeroSection.vue";
+import homeData from "@/assets/data/Home/home";
+import HeroSection from "@/container/Home/HeroSection.vue";
 
 const { heroContent, securityContent } = homeData;
 </script>
