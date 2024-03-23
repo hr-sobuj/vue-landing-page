@@ -1,8 +1,3 @@
-import appStoreImg from '@/assets/images/footer/app-store.png';
-import playImg from '@/assets/images/footer/google-play.png';
-import instagramIcon from '@/assets/images/footer/instagram.svg';
-import linkedinIcon from '@/assets/images/footer/linkedin.svg';
-import twitterIcon from '@/assets/images/footer/twitter.svg';
 import appImg from '@/assets/images/home/app/app-img.png';
 import brandImg1 from '@/assets/images/home/brands/img-1.png';
 import brandImg2 from '@/assets/images/home/brands/img-2.png';
@@ -21,44 +16,13 @@ import heroImg2 from '@/assets/images/home/hero/hero-img-2.png';
 import heroImg3 from '@/assets/images/home/hero/hero-img-3.png';
 import performanceShape from '@/assets/images/home/performance/arrow-shape.svg';
 import performanceImg from '@/assets/images/home/performance/performance.png';
+import sayImg1 from '@/assets/images/home/say/img1.png';
+import sayImg2 from '@/assets/images/home/say/img2.png';
+import sayImg3 from '@/assets/images/home/say/img3.png';
 import securityImg from "@/assets/images/home/security/security-img.png";
-import Logo from '@/assets/images/logo.png';
 
 const home = {};
 
-home.navContents = {
-    logo: {
-        src: Logo,
-        alt: 'Logo',
-    },
-    links: [
-        {
-            url: '/',
-            name: 'Home'
-        },
-        {
-            url: '/pages',
-            name: 'Pages'
-        },
-        {
-            url: '/pricing',
-            name: 'Pricing'
-        },
-        {
-            url: '/portfolio',
-            name: 'Portfolio'
-        },
-        {
-            url: '/blog',
-            name: 'Blog'
-        },
-        {
-            url: '/contact',
-            name: 'Contact'
-        }
-    ],
-    btnTxt: 'Get Started Free'
-};
 
 home.heroContents = {
     heroImg1: {
@@ -269,75 +233,6 @@ home.say = {
             name: 'Kristin Watson',
             designation: 'UX Designer at Google'
         },
-    ]
-}
-
-home.footer = {
-    logo: Logo,
-    description: 'Phasellus pulvinar porta turpis sit amet facilis sapien bibendum eu praesent massa.',
-    phone: '+8801797972527',
-    email: 'sobujhd@gmail.com',
-    playIcon: playImg,
-    appStore: appStoreImg,
-    usefulLinks: [
-        {
-            name: 'Feature',
-            url: '#'
-        },
-        {
-            name: 'About',
-            url: '#'
-        },
-        {
-            name: 'Service',
-            url: '#'
-        },
-        {
-            name: 'Team',
-            url: '#'
-        },
-    ],
-    helpAndSupport: [
-        {
-            name: 'FAQ',
-            url: '#'
-        },
-        {
-            name: 'Blog',
-            url: '#'
-        },
-        {
-            name: 'Contact Us',
-            url: '#'
-        },
-        {
-            name: 'Support',
-            url: '#'
-        },
-    ],
-    resources: [
-        {
-            name: 'Guides & Resources',
-            url: '#'
-        },
-        {
-            name: 'Teams',
-            url: '#'
-        },
-        {
-            name: 'Tools',
-            url: '#'
-        },
-        {
-            name: 'Support',
-            url: '#'
-        },
-    ],
-    copyRight: '© All Right Reserved',
-    socialIcon: [
-        instagramIcon,
-        twitterIcon,
-        linkedinIcon
     ]
 }
 
