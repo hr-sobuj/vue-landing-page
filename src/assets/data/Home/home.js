@@ -1,3 +1,8 @@
+import appStoreImg from '@/assets/images/footer/app-store.png';
+import playImg from '@/assets/images/footer/google-play.png';
+import instagramIcon from '@/assets/images/footer/instagram.svg';
+import linkedinIcon from '@/assets/images/footer/linkedin.svg';
+import twitterIcon from '@/assets/images/footer/twitter.svg';
 import appImg from '@/assets/images/home/app/app-img.png';
 import brandImg1 from '@/assets/images/home/brands/img-1.png';
 import brandImg2 from '@/assets/images/home/brands/img-2.png';
@@ -157,7 +162,6 @@ home.performanceContent = {
                 description: 'Amet minim elit nulla exercitation in aute adipisicing aliquip do consequat reprehenderit.'
             }
         ],
-        description: 'Suspendisse mollis ligula dictum iaculis viverra nulla velit phauy lorem ac scelerisque neque turpis.'
     },
     performanceImg: {
         src: performanceImg,
@@ -207,6 +211,134 @@ home.app = {
         src: appImg,
         alt: 'App Image'
     }
+}
+
+
+home.help = {
+    title: 'We Help To GrowYour Business',
+    description: 'Quisque fermentum porta tincidunt. Interdum semper. Pellentesque facilisis augue dolor mollis suscipit erat libero fermentum.',
+    items: [
+        {
+            number: '142+',
+            description: 'New Features'
+        },
+        {
+            number: '28k+',
+            description: 'APP Download'
+        },
+        {
+            number: '53M+',
+            description: 'Active Users'
+        },
+        {
+            number: '90%',
+            description: 'Positive Rate'
+        },
+    ]
+}
+
+
+home.say = {
+    title: 'What People Say',
+    description: 'Quisque fermentum porta tincidunt. Interdum semper. Pellentesque facilisis augue mollis suscipit.',
+    cards: [
+        {
+            img: {
+                src: sayImg1,
+                alt: 'Say Image 1'
+            },
+            speech: '“I just simply love tools that make my life easier! I have everything that I need in one place, and that allows our team to be more organized and user-oriented.”',
+            name: 'Jenny Wilson',
+            designation: 'Project Manager at Microsoft'
+        },
+        {
+            img: {
+                src: sayImg2,
+                alt: 'Say Image 2'
+            },
+            speech: '“I really like that I can have all in one place: I can send emails and text messages, I can have live chat, show pop-ups and push notifications on my website and create dynamic page content”',
+            name: 'Robert Fox',
+            designation: 'Founder at Brain.co'
+        },
+        {
+            img: {
+                src: sayImg3,
+                alt: 'Say Image 3'
+            },
+            speech: '“Very easy to use and set up is simple. I can easily provide live support to my website visitors in real-time. It also provides many integrations.”',
+            name: 'Kristin Watson',
+            designation: 'UX Designer at Google'
+        },
+    ]
+}
+
+home.footer = {
+    logo: Logo,
+    description: 'Phasellus pulvinar porta turpis sit amet facilis sapien bibendum eu praesent massa.',
+    phone: '+8801797972527',
+    email: 'sobujhd@gmail.com',
+    playIcon: playImg,
+    appStore: appStoreImg,
+    usefulLinks: [
+        {
+            name: 'Feature',
+            url: '#'
+        },
+        {
+            name: 'About',
+            url: '#'
+        },
+        {
+            name: 'Service',
+            url: '#'
+        },
+        {
+            name: 'Team',
+            url: '#'
+        },
+    ],
+    helpAndSupport: [
+        {
+            name: 'FAQ',
+            url: '#'
+        },
+        {
+            name: 'Blog',
+            url: '#'
+        },
+        {
+            name: 'Contact Us',
+            url: '#'
+        },
+        {
+            name: 'Support',
+            url: '#'
+        },
+    ],
+    resources: [
+        {
+            name: 'Guides & Resources',
+            url: '#'
+        },
+        {
+            name: 'Teams',
+            url: '#'
+        },
+        {
+            name: 'Tools',
+            url: '#'
+        },
+        {
+            name: 'Support',
+            url: '#'
+        },
+    ],
+    copyRight: '© All Right Reserved',
+    socialIcon: [
+        instagramIcon,
+        twitterIcon,
+        linkedinIcon
+    ]
 }
 
 export default home;

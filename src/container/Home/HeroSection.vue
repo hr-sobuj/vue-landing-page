@@ -75,7 +75,7 @@ const {
       </div>
       <div class="basis-full md:basis-1/2 w-full order-2">
         <div class="group">
-          <div class="relative group">
+          <div class="relative">
             <div class="inline-flex justify-start items-start z-[200]">
               <img :src="heroImg1.src" :alt="heroImg1.alt" class="relative" />
               <img
