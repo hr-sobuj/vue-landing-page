@@ -1,13 +1,21 @@
+import appImg from '@/assets/images/home/app/app-img.png';
 import brandImg1 from '@/assets/images/home/brands/img-1.png';
 import brandImg2 from '@/assets/images/home/brands/img-2.png';
 import brandImg3 from '@/assets/images/home/brands/img-3.png';
 import brandImg4 from '@/assets/images/home/brands/img-4.png';
+import chooseImg from '@/assets/images/home/choose/choose-img.png';
+import chooseShape1 from '@/assets/images/home/choose/shape-1.svg';
+import chooseShape2 from '@/assets/images/home/choose/shape-2.svg';
+import chooseShape3 from '@/assets/images/home/choose/shape-3.svg';
+import chooseShape4 from '@/assets/images/home/choose/shape-4.svg';
 import growIcon1 from '@/assets/images/home/grow/icon1.svg';
 import growIcon2 from '@/assets/images/home/grow/icon2.svg';
 import growIcon3 from '@/assets/images/home/grow/icon3.svg';
 import heroImg1 from '@/assets/images/home/hero/hero-img-1.png';
 import heroImg2 from '@/assets/images/home/hero/hero-img-2.png';
 import heroImg3 from '@/assets/images/home/hero/hero-img-3.png';
+import performanceShape from '@/assets/images/home/performance/arrow-shape.svg';
+import performanceImg from '@/assets/images/home/performance/performance.png';
 import securityImg from "@/assets/images/home/security/security-img.png";
 import Logo from '@/assets/images/logo.png';
 
@@ -120,6 +128,84 @@ home.securityContents = {
     securityImg: {
         src: securityImg,
         alt: 'Security Image'
+    }
+}
+
+home.performanceContent = {
+    title: 'Performance Is The Key To Most People Achieving A Better Future',
+    description: 'Etiam euismod odio euismod lacus fringilla hendrer.',
+    accordion: {
+        items: [
+            {
+                title: 'Custom Edit Tool Application',
+                description: 'Cupidatat laboris non duis non et deserunt in nisi do consequat excepteur.'
+            },
+            {
+                title: 'Built In Safty Chat Mode Enabled',
+                description: 'Fugiat culpa nulla eu cupidatat occaecat nisi.'
+            },
+            {
+                title: 'Foster Trust Builds System Always Open',
+                description: 'Do ut fugiat pariatur pariatur ipsum fugiat occaecat tempor voluptate nostrud excepteur sint.'
+            },
+            {
+                title: 'Foster Trust Builds System Always Open',
+                description: 'Do ut fugiat pariatur pariatur ipsum fugiat occaecat tempor voluptate nostrud excepteur sint.'
+            },
+            {
+                title: 'Create Auto Layouts In App Interface',
+                description: 'Amet minim elit nulla exercitation in aute adipisicing aliquip do consequat reprehenderit.'
+            }
+        ],
+        description: 'Suspendisse mollis ligula dictum iaculis viverra nulla velit phauy lorem ac scelerisque neque turpis.'
+    },
+    performanceImg: {
+        src: performanceImg,
+        alt: 'Performance Image'
+    },
+    performanceShape: {
+        src: performanceShape,
+        alt: 'Performance Shape'
+    }
+}
+
+home.choose = {
+    title: 'Why Will You Choose Our Application',
+    description: 'Class aptent taciti sociosqu ad litora torquen conubia nostramase inceptos himenaeo. Phasellus metus nisl euismod eget lorem.',
+    chooseImg: {
+        src: chooseImg,
+        alt: 'Choose Image'
+    },
+    cards: [
+        {
+            icon: chooseShape1,
+            title: 'Creative Ideas',
+            description: 'Class aptent taciti sociq u litora torquen conub.'
+        },
+        {
+            icon: chooseShape2,
+            title: 'Awesome Design',
+            description: 'Integer a elit pellentesqu e semper sem ultricies.'
+        },
+        {
+            icon: chooseShape3,
+            title: 'Best Features',
+            description: 'Fusce risus lorem pulvin ar eu posuere vitae.'
+        },
+        {
+            icon: chooseShape4,
+            title: 'Easy Solutions',
+            description: 'Aenean eget nulla eu dui malesuad convallis vel.'
+        },
+    ]
+}
+
+home.app = {
+    title: 'Ready To Use Our App With No Hidden Malware',
+    description: 'Etiam euismod volutpat lacus fringilla henr. Mauris lobortis purus velit quis. Nunc mollis venenatis metus nec aliquet.',
+    appImg: {
+        src: appImg,
+        alt: 'App Image'
     }
 }
 
