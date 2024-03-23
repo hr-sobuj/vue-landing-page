@@ -13,7 +13,11 @@ export default {
         textGray: '#4F4F4F',
         secondary2: '#141F39',
         grayIcon: '#B4B6C4'
-      }
+      },
+      fontFamily: {
+        spaceGrotesk: ["Space Grotesk", 'sans-serif'],
+        inter: ["Inter", 'sans-serif'],
+      },
     },
   },
   plugins: [],

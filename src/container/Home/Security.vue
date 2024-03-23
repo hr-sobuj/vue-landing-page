@@ -9,7 +9,7 @@ interface ExtraContent {
 interface SecurityContents {
   title: string;
   description: string;
-  extra: ExtraContent[];
+  extras: ExtraContent[];
   securityImg: ImgType;
 }
 const props = defineProps<{
@@ -17,20 +17,32 @@ const props = defineProps<{
 }>();
 const {
   // @ts-ignore
-  securityContents: { title, description, securityImg },
+  securityContents: { title, description, securityImg, extras },
 } = props;
 </script>
 
 <template name="Security">
   <section id="security">
     <div class="container">
-      <div class="flex justify-center items-center">
-        <div>
-          <div>
-            <h3>{{ title }}</h3>
+      <div class="flex justify-center items-center space-x-10">
+        <div class="basis-1/3 flex flex-col space-y-10">
+          <div class="inline-flex flex-col space-y-6">
+            <h3 class="title text-4xl">{{ title }}</h3>
+            <p class="description text-base">
+              {{ description }}
+            </p>
+          </div>
+          <hr />
+          <div class="flex flex-col space-y-6">
+            <div v-for="extra of extras" :key="extra.title">
+              <h3 class="title text-[1.33rem]">{{ extra.title }}</h3>
+              <p class="description text-lg">
+                {{ extra.description }}
+              </p>
+            </div>
           </div>
         </div>
-        <div>
+        <div class="basis-2/3">
           <img :src="securityImg.src" :alt="securityImg.alt" />
         </div>
       </div>

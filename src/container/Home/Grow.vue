@@ -8,13 +8,16 @@ interface Card {
 interface GrowContents {
   title: string;
   description: string;
-  card: Card[];
+  cards: Card[];
 }
 
 const props = defineProps<{
   growContents: GrowContents;
 }>();
-const { growContents } = props;
+const {
+  // @ts-ignore
+  growContents: { title, description, cards },
+} = props;
 </script>
 
 <template name="Grow">
@@ -22,26 +25,30 @@ const { growContents } = props;
     <div class="container">
       <div class="flex flex-col justify-center items-center space-y-12">
         <div class="text-center inline-flex space-y-4 flex-col">
-          <h3 class="text-4xl text-secondary2 font-semibold">
-            {{ growContents.title }}
+          <h3 class="title text-4xl">
+            {{ title }}
           </h3>
           <div class="inline-flex justify-center items-center">
-            <p class="text-textGray text-base">
-              {{ growContents.description }}
+            <p class="description text-base">
+              {{ description }}
             </p>
           </div>
         </div>
         <div class="flex space-x-6">
           <div
-            v-for="card of growContents.card"
+            v-for="card of cards"
             :key="card.title"
-            class="flex flex-col justify-center items-center text-center bg-white py-14 px-7 space-y-4 custom-shadow"
+            class="flex flex-col justify-center items-center text-center bg-white py-24 px-7 space-y-5 custom-shadow"
           >
-            <img :src="card.icon" :alt="card.title" class="w-[70px] h-[70px]" />
-            <h5 class="text-secondary2 text-xl font-semibold">
+            <img
+              :src="card.icon"
+              :alt="card.title"
+              class="w-[4.4rem] h-[4.4rem]"
+            />
+            <h5 class="title text-[1.33rem]">
               {{ card.title }}
             </h5>
-            <p class="text-textGray text-lg">{{ card.description }}</p>
+            <p class="description text-lg">{{ card.description }}</p>
           </div>
         </div>
       </div>

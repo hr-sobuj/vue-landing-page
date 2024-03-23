@@ -84,7 +84,7 @@ home.brandContents = {
 home.growContents = {
     title: 'How To Grow Your Business',
     description: 'Class aptent taciti sociosqu ad litora torquen conubia nostramase inceptos himenaeo. Phasellus metus nisl euismod eget lorem.',
-    card: [
+    cards: [
         {
             icon: growIcon1,
             title: 'Active User Analytics',
@@ -107,7 +107,7 @@ home.growContents = {
 home.securityContents = {
     title: 'Better Security To Better Protection An Experience Of Strength.',
     description: 'Class aptent taciti sociosqu ad litora torquent conubia nostrama inceptos himenaeos. Donec tristique nibh ipsum dignissim.',
-    extra: [
+    extras: [
         {
             title: 'Well Organised User Interface',
             description: 'Etiam id euismod odio. Ut euismod sem a lacus fringilla.',
@@ -117,7 +117,10 @@ home.securityContents = {
             description: 'Cras eleifend leo ac varius tristique suspendisse.',
         }
     ],
-    securityImg
+    securityImg: {
+        src: securityImg,
+        alt: 'Security Image'
+    }
 }
 
 export default home;

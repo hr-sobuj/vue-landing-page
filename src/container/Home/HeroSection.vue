@@ -40,10 +40,10 @@ const {
           class="flex flex-col justify-center space-y-10 md:absolute md:inset-y-auto"
         >
           <div class="inline-flex flex-col space-y-5">
-            <h3 class="text-5xl font-bold">
+            <h3 class="title text-7xl">
               {{ title }}
             </h3>
-            <p class="text-textGray">
+            <p class="description text-lg">
               {{ description }}
             </p>
           </div>
