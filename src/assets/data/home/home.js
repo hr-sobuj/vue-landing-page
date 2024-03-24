@@ -181,19 +181,23 @@ home.helpContents = {
     description: 'Quisque fermentum porta tincidunt. Interdum semper. Pellentesque facilisis augue dolor mollis suscipit erat libero fermentum.',
     items: [
         {
-            number: '142+',
+            number: 142,
+            postfix: '+',
             description: 'New Features'
         },
         {
-            number: '28k+',
+            number: 28,
+            postfix: 'k+',
             description: 'APP Download'
         },
         {
-            number: '53M+',
+            number: 53,
+            postfix: 'M+',
             description: 'Active Users'
         },
         {
-            number: '90%',
+            number: 90,
+            postfix: '%',
             description: 'Positive Rate'
         },
     ]
@@ -230,6 +234,15 @@ home.sayContents = {
             speech: '“Very easy to use and set up is simple. I can easily provide live support to my website visitors in real-time. It also provides many integrations.”',
             name: 'Kristin Watson',
             designation: 'UX Designer at Google'
+        },
+        {
+            img: {
+                src: sayImg2,
+                alt: 'Say Image 2'
+            },
+            speech: '“I really like that I can have all in one place: I can send emails and text messages, I can have live chat, show pop-ups and push notifications on my website and create dynamic page content”',
+            name: 'Robert Fox',
+            designation: 'Founder at Brain.co'
         },
     ]
 }

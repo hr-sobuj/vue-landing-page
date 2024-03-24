@@ -1,13 +1,12 @@
 <script setup lang="ts">
-interface ItemTypes {
-  number: string;
-  description: string;
-}
+// @ts-ignore
+import { CounterItemTypes } from "@interfaces/homeInterface";
+import { onMounted, onUnmounted, ref } from "vue";
 
 interface HelpContents {
   title: string;
   description: string;
-  items: ItemTypes[];
+  items: CounterItemTypes[];
 }
 
 const props = defineProps<{
@@ -18,6 +17,52 @@ const {
   // @ts-ignore
   helpContents: { title, description, items },
 } = props;
+
+let counters = ref<number[]>(Array(4).fill(0));
+let isCounting = false;
+let timerId: ReturnType<typeof setTimeout> | null;
+
+onMounted(() => {
+  window.addEventListener("scroll", handleScrolling);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", handleScrolling);
+  if (timerId) clearTimeout(timerId);
+});
+
+const handleScrolling = () => {
+  let helpSection = document.getElementById("help");
+  if (helpSection) {
+    let { top, bottom } = helpSection.getBoundingClientRect();
+    if (top < window.innerHeight && bottom > 0 && !isCounting) {
+      startCounterUp();
+      isCounting = true;
+    }
+  }
+};
+
+const startCounterUp = () => {
+  const maxNumber = Math.max(...items.map((item) => item.number));
+  const duration = 3000;
+  const increment = () => {
+    items.forEach((item, idx) => {
+      const targetNumber = item.number;
+      if (counters.value[idx] < targetNumber) {
+        counters.value[idx] = Math.min(++counters.value[idx], targetNumber);
+      }
+    });
+
+    if (
+      counters.value.some(
+        (value: number, idx: number) => value < items[idx].number
+      )
+    ) {
+      timerId = setTimeout(increment, duration / maxNumber);
+    }
+  };
+  increment();
+};
 </script>
 
 <template name="HelpSection">
@@ -32,11 +77,18 @@ const {
         </div>
         <div class="grid grid-cols-4 justify-between items-center w-full">
           <div
-            v-for="item of items"
+            v-for="(item, idx) of items"
             :key="item.number"
             class="inline-flex flex-col space-y-5 justify-center items-center"
           >
-            <h3 class="font-bold text-5xl text-white">{{ item.number }}</h3>
+            <h3 class="font-bold text-5xl text-white">
+              <span>
+                {{ counters[idx] }}
+              </span>
+              <span class="ml-1">
+                {{ item.postfix }}
+              </span>
+            </h3>
             <p class="text-lg text-white">{{ item.description }}</p>
           </div>
         </div>
