@@ -115,7 +115,9 @@ const {
             </div>
           </div>
         </div>
-        <div class="basis-3/5 grid grid-cols-3 justify-between items-center">
+        <div
+          class="basis-3/5 grid grid-cols-1 md:grid-cols-3 justify-between items-center"
+        >
           <ul class="flex flex-col justify-self-end space-y-4">
             <h3 class="font-bold font-spaceGrotesk">Useful Link</h3>
             <li v-for="usefulLink of usefulLinks" :key="usefulLink.name">

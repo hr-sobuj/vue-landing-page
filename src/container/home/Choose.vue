@@ -42,7 +42,9 @@ const {
         <div>
           <img :src="chooseImg.src" :alt="chooseImg.alt" />
         </div>
-        <div class="grid grid-cols-4 gap-x-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-y-6 gap-x-0 md:gap-y-0 md:gap-x-6"
+        >
           <div
             v-for="card of cards"
             :key="card.title"

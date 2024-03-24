@@ -35,7 +35,7 @@ const {
             </p>
           </div>
         </div>
-        <div class="grid grid-cols-3 space-x-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 space-y-6 md:space-y-0 md:space-x-6">
           <div
             v-for="card of cards"
             :key="card.title"

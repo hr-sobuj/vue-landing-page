@@ -28,13 +28,13 @@ const {
 <template name="Performance">
   <section id="performance">
     <div class="container">
-      <div class="flex justify-center items-center">
-        <div class="basis-[65%]">
+      <div class="flex flex-col md:flex-row justify-center items-center">
+        <div class="md:basis-[65%] order-2 md:order-1">
           <div>
             <img :src="performanceImg.src" :alt="performanceImg.alt" />
           </div>
         </div>
-        <div class="basis-[35%] flex flex-col space-y-8">
+        <div class="md:basis-[35%] order-1 md:order-2 flex flex-col space-y-8">
           <div>
             <h3 class="title text-4xl">{{ title }}</h3>
             <p class="description text-base">{{ description }}</p>

@@ -75,7 +75,9 @@ const startCounterUp = () => {
             <p class="description text-base text-gray-300">{{ description }}</p>
           </div>
         </div>
-        <div class="grid grid-cols-4 justify-between items-center w-full">
+        <div
+          class="grid grid-cols-1 md:grid-cols-4 gap-y-8 md:gap-y-0 justify-between items-center w-full"
+        >
           <div
             v-for="(item, idx) of items"
             :key="item.number"

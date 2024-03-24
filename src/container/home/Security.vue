@@ -27,8 +27,10 @@ const {
 <template name="Security">
   <section id="security">
     <div class="container">
-      <div class="flex justify-center items-center space-x-10">
-        <div class="basis-1/3 flex flex-col space-y-10">
+      <div
+        class="flex flex-col md:flex-row justify-center items-center space-x-10"
+      >
+        <div class="md:basis-1/3 flex flex-col space-y-10">
           <div class="inline-flex flex-col space-y-6">
             <h3 class="title text-4xl">{{ title }}</h3>
             <p class="description text-base">
@@ -45,7 +47,7 @@ const {
             </div>
           </div>
         </div>
-        <div class="basis-2/3">
+        <div class="md:basis-2/3">
           <img :src="securityImg.src" :alt="securityImg.alt" />
         </div>
       </div>

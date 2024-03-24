@@ -66,4 +66,3 @@ const {
     </nav>
   </header>
 </template>
-../../interfaces/homeInterface
