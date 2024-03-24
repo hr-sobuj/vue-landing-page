@@ -50,8 +50,10 @@ const {
 <template name="Footer">
   <footer id="footer" class="bg-secondary2">
     <div class="container flex flex-col space-y-10">
-      <div class="flex space-x-28 text-white">
-        <div class="basis-2/5 flex flex-col space-y-6">
+      <div
+        class="flex flex-col md:flex-row space-y-10 md:space-y-0 md:space-x-28 text-white"
+      >
+        <div class="md:basis-2/5 flex flex-col space-y-6">
           <div>
             <img :src="logo.src" :alt="logo.alt" />
           </div>
@@ -116,9 +118,9 @@ const {
           </div>
         </div>
         <div
-          class="basis-3/5 grid grid-cols-1 md:grid-cols-3 justify-between items-center"
+          class="md:basis-3/5 grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-y-0 justify-between items-center"
         >
-          <ul class="flex flex-col justify-self-end space-y-4">
+          <ul class="flex flex-col md:justify-self-end space-y-4">
             <h3 class="font-bold font-spaceGrotesk">Useful Link</h3>
             <li v-for="usefulLink of usefulLinks" :key="usefulLink.name">
               <a :href="usefulLink.url" class="text-grayIcon">{{
@@ -126,7 +128,7 @@ const {
               }}</a>
             </li>
           </ul>
-          <ul class="flex flex-col justify-self-end space-y-4">
+          <ul class="flex flex-col md:justify-self-end space-y-4">
             <h3 class="font-bold font-spaceGrotesk">Help & Support</h3>
             <li v-for="helpLink of helpAndSupport" :key="helpLink.name">
               <a :href="helpLink.url" class="text-grayIcon">{{
@@ -134,7 +136,7 @@ const {
               }}</a>
             </li>
           </ul>
-          <ul class="flex flex-col justify-self-end space-y-4">
+          <ul class="flex flex-col md:justify-self-end space-y-4">
             <h3 class="font-bold font-spaceGrotesk">Resources</h3>
             <li v-for="resourcesLink of resources" :key="resourcesLink.name">
               <a :href="resourcesLink.url" class="text-grayIcon">{{

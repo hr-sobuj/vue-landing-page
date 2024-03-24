@@ -1,14 +1,5 @@
 <script setup lang="ts">
-// @ts-ignore
-import {
-  Disclosure,
-  DisclosureButton,
-  DisclosurePanel,
-  TransitionRoot,
-} from "@headlessui/vue";
-// @ts-ignore
-import { MinusIcon, PlusIcon } from "@heroicons/vue/20/solid";
-import { defineProps } from "vue";
+import { defineProps, ref } from "vue";
 
 interface AccordionType {
   title: string;
@@ -19,6 +10,8 @@ const props = defineProps<{
   accordion: AccordionType;
 }>();
 
+const open = ref(false);
+
 const {
   // @ts-ignore
   accordion: { title, description },
@@ -26,45 +19,51 @@ const {
 </script>
 
 <template>
-  <div class="w-full">
-    <TransitionRoot
-      :show="true"
-      enter-active-class="transition transform ease-out duration-500"
-      enter-from-class="opacity-0 scale-95"
-      enter-to-class="opacity-100 scale-100"
-      leave-active-class="transition transform ease-in duration-300"
-      leave-from-class="opacity-100 scale-100"
-      leave-to-class="opacity-0 scale-95"
-    >
-      <Disclosure v-slot="{ open }">
-        <DisclosureButton
-          class="flex w-full justify-between rounded-lg text-left"
-        >
-          <span class="text-xl font-bold title">{{ title }}</span>
-          <template v-if="open">
-            <MinusIcon class="h-5 w-5 font-bold" />
-          </template>
-          <template v-else>
-            <PlusIcon class="h-5 w-5 font-bold" />
-          </template>
-        </DisclosureButton>
-        <TransitionRoot
-          :show="open"
-          enter-active-class="transition-opacity ease-out duration-500"
-          enter-from-class="opacity-0"
-          enter-to-class="opacity-100"
-          leave-active-class="transition-opacity ease-in duration-300"
-          leave-from-class="opacity-100"
-          leave-to-class="opacity-0"
-        >
-          <DisclosurePanel
-            class="pb-2 pt-4 text-sm text-gray-500"
-            :class="{ 'max-h-0': !open }"
+  <div class="font-inter py-4">
+    <div class="flex flex-col justify-center overflow-hidden">
+      <div class="py-2">
+        <h2>
+          <button
+            class="flex items-center justify-between w-full text-left font-semibold py-2"
+            @click="open = !open"
           >
-            {{ description }}
-          </DisclosurePanel>
-        </TransitionRoot>
-      </Disclosure>
-    </TransitionRoot>
+            <span>{{ accordion.title }}</span>
+            <svg
+              class="fill-black shrink-0 ml-8"
+              width="16"
+              height="16"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                y="7"
+                width="16"
+                height="2"
+                rx="1"
+                class="transform origin-center transition duration-200 ease-out"
+                :class="{ '!rotate-180': open }"
+              />
+              <rect
+                y="7"
+                width="16"
+                height="2"
+                rx="1"
+                class="transform origin-center rotate-90 transition duration-200 ease-out"
+                :class="{ '!rotate-180': open }"
+              />
+            </svg>
+          </button>
+        </h2>
+        <div
+          class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+          :class="
+            open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+          "
+        >
+          <div class="overflow-hidden">
+            <p class="pb-3">{{ accordion.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>

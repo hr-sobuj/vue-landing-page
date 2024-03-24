@@ -41,7 +41,7 @@ const {
           </div>
           <table class="border-collapse">
             <tr v-for="(accordion, key) in accordions" :key="key">
-              <td class="border-t-2 border-b-2 py-8">
+              <td class="border-t-2 border-b-2">
                 <performance-accordion :accordion="accordion" />
               </td>
             </tr>

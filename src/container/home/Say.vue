@@ -50,12 +50,12 @@ const {
             :loop="true"
             :autoplay="{ delay: 3000 }"
             :breakpoints="{
-              '640': {
+              '0': {
                 slidesPerView: 1,
                 spaceBetween: 20,
               },
               '768': {
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 40,
               },
               '1024': {

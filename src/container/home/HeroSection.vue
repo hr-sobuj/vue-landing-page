@@ -73,7 +73,7 @@ const {
           </div>
         </div>
       </div>
-      <div class="basis-full md:basis-1/2 w-full order-2">
+      <div class="hidden md:block md:basis-1/2 w-full order-2">
         <div class="group">
           <div class="relative">
             <div class="inline-flex justify-start items-start z-[200]">
