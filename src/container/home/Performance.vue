@@ -34,16 +34,18 @@ const {
             <img :src="performanceImg.src" :alt="performanceImg.alt" />
           </div>
         </div>
-        <div class="basis-[35%]">
+        <div class="basis-[35%] flex flex-col space-y-8">
           <div>
             <h3 class="title text-4xl">{{ title }}</h3>
             <p class="description text-base">{{ description }}</p>
           </div>
-          <div>
-            <div v-for="(accordion, key) in accordions" :key="key">
-              <performance-accordion :accordion="accordion" />
-            </div>
-          </div>
+          <table class="border-collapse">
+            <tr v-for="(accordion, key) in accordions" :key="key">
+              <td class="border-t-2 border-b-2 py-8">
+                <performance-accordion :accordion="accordion" />
+              </td>
+            </tr>
+          </table>
         </div>
       </div>
     </div>

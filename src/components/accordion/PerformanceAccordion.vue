@@ -1,15 +1,22 @@
 <script setup lang="ts">
 // @ts-ignore
-import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/vue";
-import { ChevronUpIcon } from "@heroicons/vue/20/solid";
+import {
+  Disclosure,
+  DisclosureButton,
+  DisclosurePanel,
+  TransitionRoot,
+} from "@headlessui/vue";
+// @ts-ignore
+import { MinusIcon, PlusIcon } from "@heroicons/vue/20/solid";
+import { defineProps } from "vue";
 
-interface ItemType {
+interface AccordionType {
   title: string;
   description: string;
 }
 
 const props = defineProps<{
-  accordion: ItemType;
+  accordion: AccordionType;
 }>();
 
 const {
@@ -18,23 +25,46 @@ const {
 } = props;
 </script>
 
-<template name="PerformanceAccordion">
+<template>
   <div class="w-full">
-    <div class="mx-auto w-full bg-white">
+    <TransitionRoot
+      :show="true"
+      enter-active-class="transition transform ease-out duration-500"
+      enter-from-class="opacity-0 scale-95"
+      enter-to-class="opacity-100 scale-100"
+      leave-active-class="transition transform ease-in duration-300"
+      leave-from-class="opacity-100 scale-100"
+      leave-to-class="opacity-0 scale-95"
+    >
       <Disclosure v-slot="{ open }">
         <DisclosureButton
-          class="flex w-full justify-between rounded-lg bg-purple-100 px-4 py-2 text-left text-sm font-medium text-purple-900 hover:bg-purple-200 focus:outline-none focus-visible:ring focus-visible:ring-purple-500/75"
+          class="flex w-full justify-between rounded-lg text-left"
         >
-          <span>{{ title }}</span>
-          <ChevronUpIcon
-            :class="open ? 'rotate-180 transform' : ''"
-            class="h-5 w-5 text-purple-500"
-          />
+          <span class="text-xl font-bold title">{{ title }}</span>
+          <template v-if="open">
+            <MinusIcon class="h-5 w-5 font-bold" />
+          </template>
+          <template v-else>
+            <PlusIcon class="h-5 w-5 font-bold" />
+          </template>
         </DisclosureButton>
-        <DisclosurePanel class="px-4 pb-2 pt-4 text-sm text-gray-500">
-          {{ description }}
-        </DisclosurePanel>
+        <TransitionRoot
+          :show="open"
+          enter-active-class="transition-opacity ease-out duration-500"
+          enter-from-class="opacity-0"
+          enter-to-class="opacity-100"
+          leave-active-class="transition-opacity ease-in duration-300"
+          leave-from-class="opacity-100"
+          leave-to-class="opacity-0"
+        >
+          <DisclosurePanel
+            class="pb-2 pt-4 text-sm text-gray-500"
+            :class="{ 'max-h-0': !open }"
+          >
+            {{ description }}
+          </DisclosurePanel>
+        </TransitionRoot>
       </Disclosure>
-    </div>
+    </TransitionRoot>
   </div>
 </template>
