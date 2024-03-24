@@ -29,7 +29,9 @@ const {
   <section id="say">
     <div class="container">
       <div>
-        <div class="text-center">
+        <div
+          class="text-center flex flex-col justify-center items-center space-y-5"
+        >
           <h3 class="title text-5xl">{{ title }}</h3>
           <p class="description text-base">{{ description }}</p>
         </div>
@@ -43,16 +45,16 @@ const {
               <img :src="card.img.src" :alt="card.img.alt" class="w-24 h-24" />
             </div>
             <div
-              class="inline-flex flex-col space-y-14 text-center items-center justify-center"
+              class="inline-flex flex-col space-y-10 text-center items-center justify-center"
             >
               <p>
                 {{ card.speech }}
               </p>
               <div>
-                <p>
+                <p class="font-bold title">
                   {{ card.name }}
                 </p>
-                <p>
+                <p class="description">
                   {{ card.designation }}
                 </p>
               </div>
