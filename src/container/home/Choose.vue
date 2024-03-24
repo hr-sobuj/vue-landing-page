@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ImgType } from "../../interfaces/homeInterface";
+import { ImgType } from "@interfaces/homeInterface";
 
 interface Card {
   icon: string;
@@ -40,11 +40,11 @@ const {
         <div>
           <img :src="chooseImg.src" :alt="chooseImg.alt" />
         </div>
-        <div class="flex space-x-6">
+        <div class="grid grid-cols-4 gap-x-6">
           <div
             v-for="card of cards"
             :key="card.title"
-            class="flex flex-col justify-center items-center text-center bg-white py-24 px-7 space-y-5 custom-shadow"
+            class="flex flex-col justify-center items-center text-center bg-white py-14 px-7 space-y-5 custom-shadow"
           >
             <img
               :src="card.icon"
@@ -57,12 +57,6 @@ const {
             <p class="description text-lg">{{ card.description }}</p>
           </div>
         </div>
-      </div>
-      <div class="text-center mt-20 text-xl">
-        <span class="text-secondary2">
-          Approx <span class="text-primary font-bold"> 875+ </span> team members
-          ready to online support for you
-        </span>
       </div>
     </div>
   </section>

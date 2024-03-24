@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ImgType } from "../../interfaces/homeInterface";
+// @ts-ignore
+import { ImgType } from "@interfaces/homeInterface";
 
 interface AppContent {
   title: string;
@@ -21,14 +22,14 @@ const {
   <section id="app">
     <div class="container">
       <div class="flex justify-center items-center">
-        <div class="basis-1/2">
+        <div class="basis-1/2 flex flex-col space-y-8">
           <div>
-            <h3 class="title">{{ title }}</h3>
-            <p class="description">
+            <h3 class="title text-4xl">{{ title }}</h3>
+            <p class="description text-base">
               {{ description }}
             </p>
           </div>
-          <div>
+          <div class="flex flex-col space-y-6">
             <div>
               <input
                 type="text"
@@ -39,7 +40,9 @@ const {
               />
               <button class="btn-primary">Try Free</button>
             </div>
-            <p>Already a member? <a href="#">Sign In</a></p>
+            <p class="text-textGray">
+              Already a member? <a href="#" class="font-semibold">Sign In</a>
+            </p>
           </div>
         </div>
         <div class="basis-1/2">

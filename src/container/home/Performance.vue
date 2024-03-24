@@ -1,5 +1,7 @@
-<script setup lang="ts">
-import { ImgType } from "../../interfaces/homeInterface";
+<script async setup lang="ts">
+import { ImgType } from "@interfaces/homeInterface";
+// @ts-ignore
+import PerformanceAccordion from "@components/accordion/PerformanceAccordion.vue";
 
 interface ItemType {
   title: string;
@@ -9,7 +11,7 @@ interface ItemType {
 interface PerformanceContents {
   title: string;
   description: string;
-  accordion: ItemType[];
+  accordions: ItemType[];
   performanceImg: ImgType;
   performanceShape: ImgType;
 }
@@ -23,7 +25,7 @@ const {
   performanceContents: {
     title,
     description,
-    accordion,
+    accordions,
     performanceImg,
     performanceShape,
   },
@@ -42,11 +44,15 @@ const {
         </div>
         <div class="basis-1/2">
           <div>
-            <h3>{{ title }}</h3>
-            <p>{{ description }}</p>
+            <h3 class="title text-4xl">{{ title }}</h3>
+            <p class="description text-base">{{ description }}</p>
           </div>
           <div>
-            <!-- accordian  -->
+            <!-- accordion  -->
+            <div v-for="(accordion, key) in accordions" :key="key">
+              <!-- Render your accordion component here -->
+              <performance-accordion :accordion="accordion" />
+            </div>
           </div>
         </div>
       </div>

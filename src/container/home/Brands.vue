@@ -2,7 +2,7 @@
 import { Navigation, Autoplay } from "swiper/modules";
 // @ts-ignore
 import { Swiper, SwiperSlide } from "swiper/vue";
-import { ImgType } from "../../interfaces/homeInterface";
+import { ImgType } from "@interfaces/homeInterface";
 const modules = [Navigation, Autoplay];
 
 interface BrandContents {

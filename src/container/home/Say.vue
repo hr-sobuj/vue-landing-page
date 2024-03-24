@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ImgType } from "../../interfaces/homeInterface";
+// @ts-ignore
+import { ImgType } from "@interfaces/homeInterface";
 
 interface SayCard {
   img: ImgType;
@@ -29,19 +30,21 @@ const {
     <div class="container">
       <div>
         <div class="text-center">
-          <h3>{{ title }}</h3>
-          <p>{{ description }}</p>
+          <h3 class="title text-5xl">{{ title }}</h3>
+          <p class="description text-base">{{ description }}</p>
         </div>
-        <div class="flex space-x-8">
+        <div class="grid grid-cols-3 justify-center items-center space-x-8">
           <div
             v-for="card of cards"
             :key="card.name"
-            class="shadow-lg bg-white"
+            class="shadow-lg bg-white inline-flex flex-col justify-center items-center py-14 px-7 space-y-5"
           >
             <div>
-              <img :src="card.img.src" :alt="card.img.alt" />
+              <img :src="card.img.src" :alt="card.img.alt" class="w-24 h-24" />
             </div>
-            <div>
+            <div
+              class="inline-flex flex-col space-y-14 text-center items-center justify-center"
+            >
               <p>
                 {{ card.speech }}
               </p>

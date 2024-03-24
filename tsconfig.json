@@ -22,13 +22,27 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    /* Path */
+    "baseUrl": ".",
+    "paths": {
+      "@": [
+        "./src/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@interfaces/*": [
+        "./src/interfaces/*"
+      ]
+    }
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "src/assets/data/home/home.js"
-, "src/hooks/useHome.js"  ],
+    "src/assets/data/home/home.js",
+    "src/hooks/useHome.js"
+  ],
   "references": [
     {
       "path": "./tsconfig.node.json"

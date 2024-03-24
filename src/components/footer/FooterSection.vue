@@ -21,7 +21,7 @@ interface FooterContent {
   helpAndSupport: LinksType[];
   resources: LinksType[];
   copyRight: string;
-  socialIcon: SocialType[];
+  socialIcons: SocialType[];
 }
 
 const props = defineProps<{

@@ -23,15 +23,15 @@ const {
 <template name="HelpSection">
   <section id="help" class="bg-primary text-white">
     <div class="container">
-      <div class="flex flex-col justify-center items-center">
-        <div class="text-center">
-          <h3>{{ title }}</h3>
-          <p>{{ description }}</p>
+      <div class="flex flex-col justify-center items-center space-y-10">
+        <div class="text-center inline-flex flex-col space-y-8">
+          <h3 class="title text-4xl text-white">{{ title }}</h3>
+          <p class="description text-base text-gray-300">{{ description }}</p>
         </div>
-        <div class="flex">
+        <div class="grid grid-cols-4 justify-between items-center">
           <div v-for="item of items" :key="item.number">
-            <h3>{{ item.number }}</h3>
-            <p>{{ item.description }}</p>
+            <h3 class="font-bold text-5xl text-white">{{ item.number }}</h3>
+            <p class="text-lg text-white">{{ item.description }}</p>
           </div>
         </div>
       </div>

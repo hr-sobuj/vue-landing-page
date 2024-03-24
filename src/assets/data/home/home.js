@@ -103,7 +103,7 @@ home.securityContents = {
 home.performanceContents = {
     title: 'Performance Is The Key To Most People Achieving A Better Future',
     description: 'Etiam euismod odio euismod lacus fringilla hendrer.',
-    accordion: [
+    accordions: [
         {
             title: 'Custom Edit Tool Application',
             description: 'Cupidatat laboris non duis non et deserunt in nisi do consequat excepteur.'

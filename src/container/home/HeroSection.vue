@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ImgType } from "../../interfaces/homeInterface";
+import { ImgType } from "@interfaces/homeInterface";
 
 interface HeroContents {
   heroImg1: ImgType;
