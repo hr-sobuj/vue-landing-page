@@ -1,7 +1,7 @@
 <script async setup lang="ts">
 import { ImgType } from "@interfaces/homeInterface";
 // @ts-ignore
-// import PerformanceAccordion from "@components/accordion/PerformanceAccordion.vue";
+import PerformanceAccordion from "@components/accordion/PerformanceAccordion.vue";
 
 interface ItemType {
   title: string;
@@ -40,9 +40,8 @@ const {
             <p class="description text-base">{{ description }}</p>
           </div>
           <div>
-            <!-- accordion  -->
             <div v-for="(accordion, key) in accordions" :key="key">
-              <!-- <performance-accordion :accordion="accordion" /> -->
+              <performance-accordion :accordion="accordion" />
             </div>
           </div>
         </div>
