@@ -71,17 +71,17 @@ const startCounterUp = () => {
       <div class="flex flex-col justify-center items-center space-y-20">
         <div class="text-center inline-flex flex-col space-y-8">
           <h3 class="title text-4xl text-white">{{ title }}</h3>
-          <div class="w-3/5 mx-auto">
+          <div class="w-full md:w-3/5 mx-auto">
             <p class="description text-base text-gray-300">{{ description }}</p>
           </div>
         </div>
         <div
-          class="grid grid-cols-1 md:grid-cols-4 gap-y-8 md:gap-y-0 justify-between items-center w-full"
+          class="grid grid-cols-1 md:grid-cols-4 gap-y-14 md:gap-y-0 justify-between items-center w-full"
         >
           <div
             v-for="(item, idx) of items"
             :key="item.number"
-            class="inline-flex flex-col space-y-5 justify-center items-center"
+            class="inline-flex flex-col space-y-3 justify-center items-center"
           >
             <h3 class="font-bold text-5xl text-white">
               <span>

@@ -84,10 +84,15 @@ let open = ref(false);
       >
         <ul class="overflow-hidden p-5 flex flex-col space-y-4 bg-slate-100">
           <li v-for="link of links" :key="link.name" class="flex space-x-4">
-            <a :href="link.url" class="text-lg text-textGray">{{
+            <a :href="link.url" class="text-lg font-semibold text-black">{{
               link.name
             }}</a>
           </li>
+          <div>
+            <button class="btn-primary">
+              {{ btnTxt }}
+            </button>
+          </div>
         </ul>
       </div>
     </nav>
