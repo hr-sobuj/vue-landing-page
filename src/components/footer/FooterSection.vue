@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ImgType } from "../../interfaces/homeInterface";
+import { ImgType } from "@interfaces/homeInterface";
 
 interface LinksType {
   name: string;
@@ -49,17 +49,19 @@ const {
 
 <template name="Footer">
   <footer id="footer" class="bg-secondary2">
-    <div class="container">
+    <div class="container flex flex-col space-y-10">
       <div class="flex space-x-28 text-white">
-        <div class="basis-2/5">
+        <div class="basis-2/5 flex flex-col space-y-6">
           <div>
             <img :src="logo.src" :alt="logo.alt" />
           </div>
-          <div>
-            <p>{{ description }}</p>
-            <div>
-              <div>
-                <p class="flex">
+          <div class="flex flex-col space-y-8">
+            <p class="text-grayIcon text-base">{{ description }}</p>
+            <div class="flex flex-col space-y-7">
+              <div class="flex flex-col justify-start items-start space-y-1">
+                <p
+                  class="inline-flex space-x-1 items-center justify-center text-grayIcon"
+                >
                   <span
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +69,7 @@ const {
                       viewBox="0 0 24 24"
                       stroke-width="1.5"
                       stroke="currentColor"
-                      class="w-6 h-6"
+                      class="w-4 h-5"
                     >
                       <path
                         stroke-linecap="round"
@@ -78,7 +80,9 @@ const {
                   </span>
                   <span>{{ phone }}</span>
                 </p>
-                <p class="flex">
+                <p
+                  class="inline-flex space-x-1 items-center justify-center text-grayIcon"
+                >
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -101,45 +105,55 @@ const {
                 </p>
               </div>
               <div class="flex space-x-4">
-                <div>
+                <a href="#">
                   <img :src="playIcon.src" :alt="playIcon.alt" />
-                </div>
-                <div>
+                </a>
+                <a href="#">
                   <img :src="appStore.src" :alt="appStore.alt" />
-                </div>
+                </a>
               </div>
             </div>
           </div>
         </div>
         <div class="basis-3/5 grid grid-cols-3 justify-between items-center">
-          <ul>
-            <h3>Useful Link</h3>
+          <ul class="flex flex-col justify-self-end space-y-4">
+            <h3 class="font-bold font-spaceGrotesk">Useful Link</h3>
             <li v-for="usefulLink of usefulLinks" :key="usefulLink.name">
-              <a :href="usefulLink.url">{{ usefulLink.name }}</a>
+              <a :href="usefulLink.url" class="text-grayIcon">{{
+                usefulLink.name
+              }}</a>
             </li>
           </ul>
-          <ul>
-            <h3>Help & Support</h3>
+          <ul class="flex flex-col justify-self-end space-y-4">
+            <h3 class="font-bold font-spaceGrotesk">Help & Support</h3>
             <li v-for="helpLink of helpAndSupport" :key="helpLink.name">
-              <a :href="helpLink.url">{{ helpLink.name }}</a>
+              <a :href="helpLink.url" class="text-grayIcon">{{
+                helpLink.name
+              }}</a>
             </li>
           </ul>
-          <ul>
-            <h3>Resources</h3>
+          <ul class="flex flex-col justify-self-end space-y-4">
+            <h3 class="font-bold font-spaceGrotesk">Resources</h3>
             <li v-for="resourcesLink of resources" :key="resourcesLink.name">
-              <a :href="resourcesLink.url">{{ resourcesLink.name }}</a>
+              <a :href="resourcesLink.url" class="text-grayIcon">{{
+                resourcesLink.name
+              }}</a>
             </li>
           </ul>
         </div>
       </div>
       <div class="flex justify-between items-center text-white">
-        <p>
+        <p class="text-grayIcon">
           {{ copyRight }}
         </p>
-        <ul class="flex">
+        <ul class="flex space-x-10">
           <li v-for="(socialIcon, key) of socialIcons" :key="key">
             <a :href="socialIcon.url"
-              ><img :src="socialIcon.src" :alt="socialIcon.alt" />
+              ><img
+                :src="socialIcon.src"
+                :alt="socialIcon.alt"
+                class="w-6 h-6"
+              />
             </a>
           </li>
         </ul>
