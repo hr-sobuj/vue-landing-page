@@ -21,15 +21,21 @@ const {
 </script>
 
 <template name="HelpSection">
-  <section id="help" class="bg-primary text-white">
+  <section id="help" class="bg-primary text-white py-16">
     <div class="container">
-      <div class="flex flex-col justify-center items-center space-y-10">
+      <div class="flex flex-col justify-center items-center space-y-20">
         <div class="text-center inline-flex flex-col space-y-8">
           <h3 class="title text-4xl text-white">{{ title }}</h3>
-          <p class="description text-base text-gray-300">{{ description }}</p>
+          <div class="w-3/5 mx-auto">
+            <p class="description text-base text-gray-300">{{ description }}</p>
+          </div>
         </div>
-        <div class="grid grid-cols-4 justify-between items-center">
-          <div v-for="item of items" :key="item.number">
+        <div class="grid grid-cols-4 justify-between items-center w-full">
+          <div
+            v-for="item of items"
+            :key="item.number"
+            class="inline-flex flex-col space-y-5 justify-center items-center"
+          >
             <h3 class="font-bold text-5xl text-white">{{ item.number }}</h3>
             <p class="text-lg text-white">{{ item.description }}</p>
           </div>
