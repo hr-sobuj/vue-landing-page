@@ -90,7 +90,7 @@ const {
             <img
               :src="heroImg3.src"
               :alt="heroImg3.alt"
-              class="absolute bottom-[-330px] right-[42px] z-[-10]"
+              class="absolute bottom-[-330px] right-[177px] z-[-10]"
             />
           </div>
         </div>
