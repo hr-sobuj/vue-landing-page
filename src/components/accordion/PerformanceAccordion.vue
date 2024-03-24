@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<!-- <script setup lang="ts">
 import { Disclosure } from "@headlessui/vue";
 import { ref } from "vue";
 
@@ -41,4 +41,4 @@ const handleDisclosureChange = (value: boolean) => {
       </Disclosure>
     </div>
   </div>
-</template>
+</template> -->

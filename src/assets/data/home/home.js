@@ -14,11 +14,11 @@ import growIcon3 from '@/assets/images/home/grow/icon3.svg';
 import heroImg1 from '@/assets/images/home/hero/hero-img-1.png';
 import heroImg2 from '@/assets/images/home/hero/hero-img-2.png';
 import heroImg3 from '@/assets/images/home/hero/hero-img-3.png';
-import performanceShape from '@/assets/images/home/performance/arrow-shape.svg';
 import performanceImg from '@/assets/images/home/performance/performance.png';
 import sayImg1 from '@/assets/images/home/say/img1.png';
 import sayImg2 from '@/assets/images/home/say/img2.png';
 import sayImg3 from '@/assets/images/home/say/img3.png';
+import securityShape from '@/assets/images/home/security/arrow-shape.svg';
 import securityImg from "@/assets/images/home/security/security-img.png";
 
 const home = {};
@@ -97,6 +97,10 @@ home.securityContents = {
     securityImg: {
         src: securityImg,
         alt: 'Security Image'
+    },
+    securityShape: {
+        src: securityShape,
+        alt: 'Performance Shape'
     }
 }
 
@@ -129,10 +133,6 @@ home.performanceContents = {
         src: performanceImg,
         alt: 'Performance Image'
     },
-    performanceShape: {
-        src: performanceShape,
-        alt: 'Performance Shape'
-    }
 }
 
 home.chooseContents = {

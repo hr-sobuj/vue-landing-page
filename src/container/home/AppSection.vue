@@ -22,7 +22,7 @@ const {
   <section id="app">
     <div class="container">
       <div class="flex justify-center items-center">
-        <div class="basis-1/2 flex flex-col space-y-8">
+        <div class="basis-[32%] flex flex-col space-y-8">
           <div>
             <h3 class="title text-4xl">{{ title }}</h3>
             <p class="description text-base">
@@ -45,7 +45,7 @@ const {
             </p>
           </div>
         </div>
-        <div class="basis-1/2">
+        <div class="basis-[68%]">
           <img :src="appImg.src" :alt="appImg.alt" />
         </div>
       </div>

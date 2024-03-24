@@ -33,7 +33,9 @@ const {
           class="text-center flex flex-col justify-center items-center space-y-5"
         >
           <h3 class="title text-5xl">{{ title }}</h3>
-          <p class="description text-base">{{ description }}</p>
+          <div class="w-[30%] mx-auto">
+            <p class="description text-base">{{ description }}</p>
+          </div>
         </div>
         <div class="grid grid-cols-3 justify-center items-center space-x-8">
           <div

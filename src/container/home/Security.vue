@@ -11,6 +11,7 @@ interface SecurityContents {
   description: string;
   extras: ExtraContent[];
   securityImg: ImgType;
+  securityShape: ImgType;
 }
 
 const props = defineProps<{
@@ -19,7 +20,7 @@ const props = defineProps<{
 
 const {
   // @ts-ignore
-  securityContents: { title, description, securityImg, extras },
+  securityContents: { title, description, securityImg, extras, securityShape },
 } = props;
 </script>
 

@@ -28,10 +28,12 @@ const {
     <div class="container">
       <div class="flex flex-col justify-center items-center space-y-12">
         <div class="text-center inline-flex space-y-4 flex-col">
-          <h3 class="title text-4xl">
-            {{ title }}
-          </h3>
-          <div class="inline-flex justify-center items-center">
+          <div class="w-[55%] mx-auto">
+            <h3 class="title text-4xl">
+              {{ title }}
+            </h3>
+          </div>
+          <div class="w-[55%] mx-auto">
             <p class="description text-base">
               {{ description }}
             </p>
