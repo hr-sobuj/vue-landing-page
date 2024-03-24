@@ -40,7 +40,7 @@ const {
           class="flex flex-col justify-center space-y-10 md:absolute md:inset-y-auto"
         >
           <div class="inline-flex flex-col space-y-5">
-            <h3 class="title text-7xl">
+            <h3 class="title text-3xl md:text-7xl">
               {{ title }}
             </h3>
             <p class="description text-lg">
@@ -48,7 +48,7 @@ const {
             </p>
           </div>
           <div class="flex justify-start items-center space-x-6">
-            <button class="btn-primary px-10">{{ btn1 }}</button>
+            <button class="btn-primary px-5 md:px-10">{{ btn1 }}</button>
             <button class="inline-flex space-x-1 font-semibold group">
               <span>
                 {{ btn2 }}
@@ -98,4 +98,3 @@ const {
     </div>
   </section>
 </template>
-../../interfaces/homeInterface

@@ -30,7 +30,9 @@ const {
             </p>
           </div>
           <div class="flex flex-col w-full space-y-6">
-            <div class="flex space-x-5 w-full">
+            <div
+              class="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-5 w-full"
+            >
               <input
                 type="text"
                 name=""

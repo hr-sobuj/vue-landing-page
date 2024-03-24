@@ -38,7 +38,7 @@ const {
           class="text-center flex flex-col justify-center items-center space-y-5"
         >
           <h3 class="title text-5xl">{{ title }}</h3>
-          <div class="w-[30%] mx-auto">
+          <div class="w-full md:w-[30%] mx-auto">
             <p class="description text-base">{{ description }}</p>
           </div>
         </div>

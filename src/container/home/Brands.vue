@@ -28,6 +28,20 @@ const {
         :loop="true"
         :autoplay="{ delay: 2000 }"
         class="flex justify-center items-center"
+        :breakpoints="{
+          '0': {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          '768': {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          '1024': {
+            slidesPerView: 3,
+            spaceBetween: 50,
+          },
+        }"
       >
         <swiper-slide v-for="sliderItem of sliderItems" :key="sliderItem.src">
           <img :src="sliderItem.src" :alt="sliderItem.alt" />
