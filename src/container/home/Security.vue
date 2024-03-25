@@ -50,7 +50,7 @@ const {
             <img
               :src="securityShape.src"
               :alt="securityShape.alt"
-              class="hidden md:inline-block md:absolute top-[24px] right-[-79px]"
+              class="hidden md:inline-block md:absolute top-[24px] right-[-107px]"
             />
           </div>
         </div>
