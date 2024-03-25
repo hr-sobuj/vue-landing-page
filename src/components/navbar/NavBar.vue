@@ -77,7 +77,7 @@ let open = ref(false);
         </div>
       </div>
       <div
-        class="grid text-sm text-slate-600 overflow-hidden transition-all duration-300 ease-in-out"
+        class="grid text-sm text-slate-50 overflow-hidden transition-all duration-300 ease-in-out"
         :class="
           open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
         "
