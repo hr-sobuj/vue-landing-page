@@ -83,8 +83,8 @@ let open = ref(false);
         "
       >
         <ul
-          class="overflow-hidden flex flex-col space-y-4 bg-slate-100"
-          :class="{ 'hidden p-5': open }"
+          class="overflow-hidden lg:hidden flex flex-col space-y-4 bg-slate-100 transition-all duration-200"
+          :class="{ ' p-5': open }"
         >
           <li v-for="link of links" :key="link.name" class="flex space-x-4">
             <a :href="link.url" class="text-lg text-black">{{ link.name }}</a>
