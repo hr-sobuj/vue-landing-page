@@ -65,8 +65,13 @@ const {
         </div>
       </div>
       <div class="block md:basis-1/2 w-full order-2">
-        <div class="flex justify-center">
+        <div class="flex justify-center relative">
           <img :src="heroGroupImg.src" :alt="heroGroupImg.alt" />
+          <div
+            class="absolute left-[13%] md:left-[26%] top-[24%] rounded-full z-[-200]"
+          >
+            <div class="bg-[#15BEE3] p-28 opacity-[0.07] blur-md"></div>
+          </div>
         </div>
       </div>
     </div>

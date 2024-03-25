@@ -19,7 +19,7 @@ const {
 </script>
 
 <template name="Brands">
-  <section id="brands" class="clear-both mt-[300px]">
+  <section id="brands">
     <div class="container">
       <swiper
         :modules="modules"
