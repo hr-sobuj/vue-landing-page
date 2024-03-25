@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { Navigation, Autoplay } from "swiper/modules";
+import { Autoplay, Navigation } from "swiper/modules";
 // @ts-ignore
-import { Swiper, SwiperSlide } from "swiper/vue";
 import { ImgType } from "@interfaces/homeInterface";
+import { Swiper, SwiperSlide } from "swiper/vue";
 const modules = [Navigation, Autoplay];
 
 interface BrandContents {
@@ -34,11 +34,11 @@ const {
             spaceBetween: 20,
           },
           '768': {
-            slidesPerView: 2,
+            slidesPerView: 3,
             spaceBetween: 40,
           },
           '1024': {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 50,
           },
         }"

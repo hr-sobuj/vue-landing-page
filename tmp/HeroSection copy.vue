@@ -73,27 +73,23 @@ const {
           </div>
         </div>
       </div>
-      <div class="hidden md:block md:basis-1/2 w-full order-2">
-        <div class="group">
-          <div class="relative">
-            <div class="inline-flex justify-start items-start z-[200]">
-              <img :src="heroImg1.src" :alt="heroImg1.alt" class="relative" />
-              <img
-                :src="heroImg2.src"
-                :alt="heroImg2.alt"
-                class="absolute left-[265px] top-[44px]"
-              />
-            </div>
-            <div class="absolute left-[30%] top-[45%] rounded-full z-[-200]">
-              <div class="bg-[#15BEE3] p-28 opacity-[0.07] blur-md"></div>
-            </div>
-            <img
-              :src="heroImg3.src"
-              :alt="heroImg3.alt"
-              class="absolute bottom-[-330px] right-[177px] z-[-10]"
-            />
-          </div>
+      <div class="block md:basis-1/2 w-full order-2 relative">
+        <div class="inline-flex justify-start items-start z-[200]">
+          <img :src="heroImg1.src" :alt="heroImg1.alt" />
+          <img
+            :src="heroImg2.src"
+            :alt="heroImg2.alt"
+            class="float-left ml-[-100px]"
+          />
         </div>
+        <div class="absolute left-[30%] top-[45%] rounded-full z-[-200]">
+          <div class="bg-[#15BEE3] p-28 opacity-[0.07] blur-md"></div>
+        </div>
+        <img
+          :src="heroImg3.src"
+          :alt="heroImg3.alt"
+          class="float-start ml-[25%] mt-[-25%]"
+        />
       </div>
     </div>
   </section>

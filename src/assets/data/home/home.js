@@ -11,6 +11,7 @@ import chooseShape4 from '@/assets/images/home/choose/shape-4.svg';
 import growIcon1 from '@/assets/images/home/grow/icon1.svg';
 import growIcon2 from '@/assets/images/home/grow/icon2.svg';
 import growIcon3 from '@/assets/images/home/grow/icon3.svg';
+import heroGrpImg from '@/assets/images/home/hero/hero-group-img.png';
 import heroImg1 from '@/assets/images/home/hero/hero-img-1.png';
 import heroImg2 from '@/assets/images/home/hero/hero-img-2.png';
 import heroImg3 from '@/assets/images/home/hero/hero-img-3.png';
@@ -36,6 +37,10 @@ home.heroContents = {
     heroImg3: {
         src: heroImg3,
         alt: 'Hero Image 3'
+    },
+    heroGroupImg: {
+        src: heroGrpImg,
+        alt: 'Hero Image'
     },
     title: 'Smart-Thinking & Innovative Solution.',
     description: 'Class aptent taciti sociosqu ad litora torquent conubia nostrama inceptos himenaeos. Donec tristique nibh ipsum dignissim.',

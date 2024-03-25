@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ImgType } from "@interfaces/homeInterface";
+import { ImgType } from "@/types/homeTypes.ts";
 
 interface HeroContents {
   heroImg1: ImgType;
@@ -11,7 +11,12 @@ interface HeroContents {
   btn2: string;
   points: string[];
 }
-
+// const props = defineProps({
+//   HeroContents: {
+//     type: Object as () => HeroContents,
+//     required: true,
+//   },
+// });
 const props = defineProps<{
   heroContents: HeroContents;
 }>();
@@ -40,15 +45,15 @@ const {
           class="flex flex-col justify-center space-y-10 md:absolute md:inset-y-auto"
         >
           <div class="inline-flex flex-col space-y-5">
-            <h3 class="title text-4xl md:text-7xl">
+            <h3 class="text-5xl font-bold">
               {{ title }}
             </h3>
-            <p class="description text-lg">
+            <p class="text-textGray">
               {{ description }}
             </p>
           </div>
           <div class="flex justify-start items-center space-x-6">
-            <button class="btn-primary px-5 md:px-10">{{ btn1 }}</button>
+            <button class="btn-primary px-10">{{ btn1 }}</button>
             <button class="inline-flex space-x-1 font-semibold group">
               <span>
                 {{ btn2 }}
@@ -73,14 +78,14 @@ const {
           </div>
         </div>
       </div>
-      <div class="hidden md:block md:basis-1/2 w-full order-2">
+      <div class="basis-full md:basis-1/2 w-full order-2">
         <div class="group">
-          <div class="relative">
+          <div class="relative group">
             <div class="inline-flex justify-start items-start z-[200]">
-              <img :src="heroImg1.src" :alt="heroImg1.alt" class="relative" />
+              <img :src="heroImg1" alt="Hero Image 1" class="relative" />
               <img
-                :src="heroImg2.src"
-                :alt="heroImg2.alt"
+                :src="heroImg2"
+                alt="Hero Image 2"
                 class="absolute left-[265px] top-[44px]"
               />
             </div>
@@ -88,9 +93,9 @@ const {
               <div class="bg-[#15BEE3] p-28 opacity-[0.07] blur-md"></div>
             </div>
             <img
-              :src="heroImg3.src"
-              :alt="heroImg3.alt"
-              class="absolute bottom-[-330px] right-[177px] z-[-10]"
+              :src="heroImg3"
+              alt="Hero Image 3"
+              class="absolute bottom-[-330px] right-[42px] z-[-10]"
             />
           </div>
         </div>

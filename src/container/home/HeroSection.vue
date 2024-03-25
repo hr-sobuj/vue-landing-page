@@ -5,6 +5,7 @@ interface HeroContents {
   heroImg1: ImgType;
   heroImg2: ImgType;
   heroImg3: ImgType;
+  heroGroupImg: ImgType;
   title: string;
   description: string;
   btn1: string;
@@ -18,15 +19,7 @@ const props = defineProps<{
 
 const {
   // @ts-ignore
-  heroContents: {
-    title,
-    description,
-    btn1,
-    btn2,
-    heroImg1,
-    heroImg2,
-    heroImg3,
-  },
+  heroContents: { title, description, btn1, btn2, heroGroupImg },
 } = props;
 </script>
 
@@ -35,10 +28,8 @@ const {
     <div
       class="container flex flex-col md:flex-row justify-center items-center min-h-full"
     >
-      <div class="basis-full md:basis-1/2 order-1 static md:relative">
-        <div
-          class="flex flex-col justify-center space-y-10 md:absolute md:inset-y-auto"
-        >
+      <div class="basis-full md:basis-1/2 order-1">
+        <div class="flex flex-col justify-center space-y-10">
           <div class="inline-flex flex-col space-y-5">
             <h3 class="title text-4xl md:text-7xl">
               {{ title }}
@@ -73,26 +64,9 @@ const {
           </div>
         </div>
       </div>
-      <div class="hidden md:block md:basis-1/2 w-full order-2">
-        <div class="group">
-          <div class="relative">
-            <div class="inline-flex justify-start items-start z-[200]">
-              <img :src="heroImg1.src" :alt="heroImg1.alt" class="relative" />
-              <img
-                :src="heroImg2.src"
-                :alt="heroImg2.alt"
-                class="absolute left-[265px] top-[44px]"
-              />
-            </div>
-            <div class="absolute left-[30%] top-[45%] rounded-full z-[-200]">
-              <div class="bg-[#15BEE3] p-28 opacity-[0.07] blur-md"></div>
-            </div>
-            <img
-              :src="heroImg3.src"
-              :alt="heroImg3.alt"
-              class="absolute bottom-[-330px] right-[177px] z-[-10]"
-            />
-          </div>
+      <div class="block md:basis-1/2 w-full order-2">
+        <div class="flex justify-center">
+          <img :src="heroGroupImg.src" :alt="heroGroupImg.alt" />
         </div>
       </div>
     </div>
