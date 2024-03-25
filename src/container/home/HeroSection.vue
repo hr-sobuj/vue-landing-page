@@ -32,7 +32,7 @@ const {
         <div class="flex flex-col justify-center space-y-10">
           <div class="flex flex-col">
             <div class="flex justify-around">
-              <div>
+              <div class="animate-bounce">
                 <svg
                   width="20"
                   height="20"
@@ -49,7 +49,7 @@ const {
                   />
                 </svg>
               </div>
-              <div>
+              <div class="animate-pulse">
                 <svg
                   width="48"
                   height="63"
@@ -135,7 +135,7 @@ const {
         <div class="flex justify-center relative">
           <img :src="heroGroupImg.src" :alt="heroGroupImg.alt" />
           <div
-            class="bg-[#15BEE3] w-[50%] h-[50%] absolute mx-auto opacity-[.07] top-20 blur-3xl z-[-200]"
+            class="bg-[#15BEE3] w-[50%] h-[50%] absolute mx-auto opacity-[.1] top-20 blur-3xl z-[-20]"
           ></div>
         </div>
       </div>
