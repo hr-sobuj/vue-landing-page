@@ -150,7 +150,7 @@ const {
         <p class="text-grayIcon">
           {{ copyRight }}
         </p>
-        <ul class="flex space-x-10">
+        <ul class="flex space-x-4">
           <li v-for="(socialIcon, key) of socialIcons" :key="key">
             <a :href="socialIcon.url"
               ><img
