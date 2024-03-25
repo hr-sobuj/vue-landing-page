@@ -1,6 +1,6 @@
 # Vue 3 + TypeScript + Vite Landing Page Template
 
-A basic landing page using Vue 3 with TypeScript in a Vite environment. It integrates Tailwind CSS for styling purposes. Refer to the [script setup documentation](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) for detailed information.
+This is a basic landing page template built using Vue 3 with TypeScript in a Vite environment. It integrates Tailwind CSS for styling purposes and includes custom components like a counter, accordion, and utilizes Swiper slider for carousel functionality. The unique aspect of this template is its content management via JSON format, where each section's content is controlled by passing objects as props to components. This enables easy customization of text and content without modifying the components directly.
 
 ## Recommended Setup
 
@@ -25,20 +25,16 @@ To get started with this template, follow these steps:
    cd vue-landing-page
    ```
 
-3. Install dependencies using bun:
-
-   Using bun:
+3. Install dependencies using npm:
 
    ```bash
    bun install
    ```
-
-   Or using npm:
+    Or using npm:
 
    ```bash
    npm install
    ```
-
    Or using yarn:
 
    ```bash
@@ -50,7 +46,7 @@ To get started with this template, follow these steps:
 After completing the installation steps, you can start the development server by running:
 
 ```bash
-bun run dev
+bun run dev 
 # or
 npm run dev
 # or
@@ -59,8 +55,19 @@ yarn dev
 
 This command will start a development server and open your default web browser with the landing page.
 
+## Features
+
+- **Custom Counter:** A counter feature triggers when scrolling down the page, implemented without external packages.
+- **Custom Accordion:** An accordion component for organizing content.
+- **Swiper Slider Integration:** Utilizes Swiper slider for carousel functionality.
+- **Responsive Design:** The landing page is fully responsive across various devices.
+
 ## Preview
 
 ![Landing Page Screenshot](landing-page-screenshot.png)
 
 You can view a live demo of this template [here](https://vue-landing-page-orpin.vercel.app/).
+
+## Customization
+
+To customize the content of each section, modify the JSON objects passed as props to the components. This allows for easy text and content changes without directly altering the components.
