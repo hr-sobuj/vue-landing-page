@@ -76,7 +76,9 @@ const {
           </div>
           <div class="flex flex-col space-y-4">
             <div class="flex justify-start items-center space-x-6">
-              <button class="btn-primary px-5 md:px-10">{{ btn1 }}</button>
+              <button class="btn-primary px-5 lg:px-10">
+                {{ btn1 }}
+              </button>
               <button class="inline-flex space-x-1 font-semibold group">
                 <span>
                   {{ btn2 }}
@@ -100,7 +102,7 @@ const {
               </button>
             </div>
             <ul
-              class="flex flex-col md:flex-row space-x-0 space-y-4 md:space-y-0 md:space-x-10"
+              class="flex flex-col lg:flex-row space-x-0 space-y-4 lg:space-y-0 lg:space-x-10"
             >
               <li
                 v-for="(point, key) of points"

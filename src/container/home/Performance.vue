@@ -37,7 +37,7 @@ const {
               class="z-10"
             />
             <div
-              class="w-full h-full bg-gray-200 blur-3xl opacity-40 absolute mx-auto z-[-10]"
+              class="w-[50%] h-[50%] bg-gray-200 blur-3xl opacity-40 absolute mx-auto z-[-10]"
             ></div>
           </div>
         </div>

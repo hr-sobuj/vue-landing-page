@@ -28,12 +28,8 @@ header.content = {
             url: '/blog',
             name: 'Blog'
         },
-        {
-            url: '/contact',
-            name: 'Contact'
-        }
     ],
-    btnTxt: 'Get Started Free'
+    btnTxt: 'Get Started'
 };
 
 
