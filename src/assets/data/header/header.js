@@ -13,19 +13,19 @@ header.content = {
             name: 'Home'
         },
         {
-            url: '/pages',
+            url: '#',
             name: 'Pages'
         },
         {
-            url: '/pricing',
+            url: '#',
             name: 'Pricing'
         },
         {
-            url: '/portfolio',
+            url: '#',
             name: 'Portfolio'
         },
         {
-            url: '/blog',
+            url: '#',
             name: 'Blog'
         },
     ],
