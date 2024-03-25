@@ -30,8 +30,15 @@ const {
     <div class="container">
       <div class="flex flex-col md:flex-row justify-center items-center">
         <div class="md:basis-[60%] lg:basis-[65%] order-2 md:order-1">
-          <div class="flex justify-center items-center">
-            <img :src="performanceImg.src" :alt="performanceImg.alt" />
+          <div class="flex justify-center items-center relative">
+            <img
+              :src="performanceImg.src"
+              :alt="performanceImg.alt"
+              class="z-10"
+            />
+            <div
+              class="w-full h-full bg-gray-200 blur-3xl opacity-40 absolute mx-auto z-[-10]"
+            ></div>
           </div>
         </div>
         <div

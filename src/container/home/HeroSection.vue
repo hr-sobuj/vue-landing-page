@@ -133,10 +133,8 @@ const {
         <div class="flex justify-center relative">
           <img :src="heroGroupImg.src" :alt="heroGroupImg.alt" />
           <div
-            class="absolute left-[13%] md:left-[26%] top-[24%] rounded-full z-[-200]"
-          >
-            <div class="bg-[#15BEE3] p-28 opacity-[0.07] blur-md"></div>
-          </div>
+            class="bg-[#15BEE3] w-[50%] h-[50%] absolute mx-auto opacity-[.07] top-20 blur-3xl z-[-200]"
+          ></div>
         </div>
       </div>
     </div>

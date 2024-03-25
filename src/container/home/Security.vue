@@ -30,7 +30,9 @@ const {
       <div
         class="flex flex-col md:flex-row justify-between items-center space-x-10"
       >
-        <div class="md:basis-1/2 flex flex-col space-y-10 relative">
+        <div
+          class="md:basis-1/2 lg:basis-[35%] l flex flex-col space-y-10 relative"
+        >
           <div class="inline-flex flex-col space-y-6">
             <h3 class="title text-4xl">{{ title }}</h3>
             <p class="description text-base">
@@ -50,12 +52,17 @@ const {
             <img
               :src="securityShape.src"
               :alt="securityShape.alt"
-              class="hidden md:inline-block md:absolute top-[24px] right-[-107px]"
+              class="hidden md:inline-block md:absolute top-[24px] right-[-107px] lg:right-[-180px] transform rotate-[329deg]"
             />
           </div>
         </div>
-        <div class="md:basis-1/2 flex justify-center items-center">
+        <div
+          class="md:basis-1/2 lg:basis-[75%] flex justify-center items-center relative"
+        >
           <img :src="securityImg.src" :alt="securityImg.alt" />
+          <div
+            class="w-full h-full bg-gray-200 blur-3xl opacity-40 absolute mx-auto z-[-10]"
+          ></div>
         </div>
       </div>
     </div>
