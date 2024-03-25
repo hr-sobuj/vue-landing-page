@@ -82,7 +82,10 @@ let open = ref(false);
           open ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
         "
       >
-        <ul class="overflow-hidden p-5 flex flex-col space-y-4 bg-slate-100">
+        <ul
+          class="overflow-hidden flex flex-col space-y-4 bg-slate-100"
+          :class="{ 'hidden p-5': open }"
+        >
           <li v-for="link of links" :key="link.name" class="flex space-x-4">
             <a :href="link.url" class="text-lg text-black">{{ link.name }}</a>
           </li>
