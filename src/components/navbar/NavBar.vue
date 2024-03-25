@@ -35,7 +35,7 @@ let open = ref(false);
             </a>
           </h1>
         </div>
-        <div class="hidden md:flex justify-between items-center space-x-16">
+        <div class="hidden lg:flex justify-between items-center space-x-16">
           <div class="flex space-x-11">
             <div v-for="link of links" :key="link.name" class="flex space-x-4">
               <a :href="link.url">{{ link.name }}</a>
@@ -47,7 +47,7 @@ let open = ref(false);
             </button>
           </div>
         </div>
-        <div class="block md:hidden">
+        <div class="block lg:hidden">
           <button @click="open = !open" :class="{ open: open }">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -84,9 +84,7 @@ let open = ref(false);
       >
         <ul class="overflow-hidden p-5 flex flex-col space-y-4 bg-slate-100">
           <li v-for="link of links" :key="link.name" class="flex space-x-4">
-            <a :href="link.url" class="text-lg font-semibold text-black">{{
-              link.name
-            }}</a>
+            <a :href="link.url" class="text-lg text-black">{{ link.name }}</a>
           </li>
           <div>
             <button class="btn-primary">
