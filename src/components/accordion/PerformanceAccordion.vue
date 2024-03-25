@@ -19,7 +19,7 @@ const {
 </script>
 
 <template>
-  <div class="font-inter py-4">
+  <div class="font-inter py-2 md:py-0 lg:py-4">
     <div class="flex flex-col justify-center overflow-hidden">
       <div class="py-2">
         <h2>

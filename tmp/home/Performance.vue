@@ -30,14 +30,14 @@ const {
     <div class="container">
       <div class="flex flex-col md:flex-row justify-center items-center">
         <div class="md:basis-[60%] lg:basis-[65%] order-2 md:order-1">
-          <div class="flex justify-center items-center">
+          <div>
             <img :src="performanceImg.src" :alt="performanceImg.alt" />
           </div>
         </div>
         <div
           class="md:basis-[40%] lg:basis-[35%] order-1 md:order-2 flex flex-col space-y-8"
         >
-          <div class="flex flex-col space-y-4">
+          <div>
             <h3 class="title text-4xl">{{ title }}</h3>
             <p class="description text-base">{{ description }}</p>
           </div>

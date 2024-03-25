@@ -27,7 +27,7 @@ const {
         :slides-per-view="4"
         :space-between="50"
         :loop="true"
-        :autoplay="{ delay: 1000 }"
+        :autoplay="{ delay: 2000 }"
         class="flex justify-center items-center"
         :breakpoints="{
           '0': {

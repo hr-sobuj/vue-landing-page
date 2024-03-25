@@ -31,7 +31,7 @@ const {
       <div class="basis-full md:basis-1/2 order-1">
         <div class="flex flex-col justify-center space-y-10">
           <div class="inline-flex flex-col space-y-5">
-            <h3 class="title text-4xl md:text-5xl lg:text-7xl">
+            <h3 class="title text-4xl md:text-7xl">
               {{ title }}
             </h3>
             <p class="description text-lg">

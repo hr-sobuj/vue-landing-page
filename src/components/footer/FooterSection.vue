@@ -118,9 +118,9 @@ const {
           </div>
         </div>
         <div
-          class="md:basis-3/5 grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-y-0 justify-between items-center"
+          class="md:basis-3/5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-8 lg:gap-y-0 justify-between items-center"
         >
-          <ul class="flex flex-col md:justify-self-end space-y-4">
+          <ul class="flex flex-col lg:justify-self-end space-y-4">
             <h3 class="font-bold font-spaceGrotesk">Useful Link</h3>
             <li v-for="usefulLink of usefulLinks" :key="usefulLink.name">
               <a :href="usefulLink.url" class="text-grayIcon">{{
@@ -128,7 +128,7 @@ const {
               }}</a>
             </li>
           </ul>
-          <ul class="flex flex-col md:justify-self-end space-y-4">
+          <ul class="flex flex-col lg:justify-self-end space-y-4">
             <h3 class="font-bold font-spaceGrotesk">Help & Support</h3>
             <li v-for="helpLink of helpAndSupport" :key="helpLink.name">
               <a :href="helpLink.url" class="text-grayIcon">{{
@@ -136,7 +136,7 @@ const {
               }}</a>
             </li>
           </ul>
-          <ul class="flex flex-col md:justify-self-end space-y-4">
+          <ul class="flex flex-col lg:justify-self-end space-y-4">
             <h3 class="font-bold font-spaceGrotesk">Resources</h3>
             <li v-for="resourcesLink of resources" :key="resourcesLink.name">
               <a :href="resourcesLink.url" class="text-grayIcon">{{

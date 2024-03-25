@@ -1,52 +1,45 @@
 <script setup lang="ts">
-import { ImgType } from "@interfaces/homeInterface";
-
 interface Card {
   icon: string;
   title: string;
   description: string;
 }
 
-interface ChooseContents {
+interface GrowContents {
   title: string;
   description: string;
-  chooseImg: ImgType;
   cards: Card[];
 }
 
 const props = defineProps<{
-  chooseContents: ChooseContents;
+  growContents: GrowContents;
 }>();
+
 const {
   // @ts-ignore
-  chooseContents: { title, description, chooseImg, cards },
+  growContents: { title, description, cards },
 } = props;
 </script>
 
-<template name="Choose">
-  <section id="choose">
+<template name="Grow">
+  <section id="grow">
     <div class="container">
       <div class="flex flex-col justify-center items-center space-y-12">
         <div class="text-center inline-flex space-y-4 flex-col">
-          <div class="w-full md:w-[55%] mx-auto">
-            <h3 class="title text-3xl md:text-4xl">
-              {{ title }}
-            </h3>
-          </div>
-          <div class="w-full md:w-[55%] mx-auto">
+          <h3 class="title text-4xl">
+            {{ title }}
+          </h3>
+          <div class="inline-flex justify-center items-center">
             <p class="description text-base">
               {{ description }}
             </p>
           </div>
         </div>
-        <div>
-          <img :src="chooseImg.src" :alt="chooseImg.alt" />
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 space-y-6 md:space-y-0 md:space-x-6">
           <div
             v-for="card of cards"
             :key="card.title"
-            class="flex flex-col justify-center items-center text-center bg-white py-14 px-7 space-y-5 custom-shadow"
+            class="flex flex-col justify-center items-center text-center bg-white py-24 px-7 space-y-5 custom-shadow"
           >
             <img
               :src="card.icon"
@@ -59,6 +52,12 @@ const {
             <p class="description text-lg">{{ card.description }}</p>
           </div>
         </div>
+      </div>
+      <div class="text-center mt-20 text-xl">
+        <span class="text-secondary2">
+          Approx <span class="text-primary font-bold"> 875+ </span> team members
+          ready to online support for you
+        </span>
       </div>
     </div>
   </section>

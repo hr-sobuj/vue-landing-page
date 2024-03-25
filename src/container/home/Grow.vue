@@ -35,11 +35,13 @@ const {
             </p>
           </div>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 space-y-6 md:space-y-0 md:space-x-6">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 space-y-6 md:space-y-0 md:space-x-6"
+        >
           <div
             v-for="card of cards"
             :key="card.title"
-            class="flex flex-col justify-center items-center text-center bg-white py-24 px-7 space-y-5 custom-shadow"
+            class="flex flex-col justify-center items-center text-center bg-white py-24 md:py-16 lg:py-24 px-7 space-y-5 custom-shadow"
           >
             <img
               :src="card.icon"
